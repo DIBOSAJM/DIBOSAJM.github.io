@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Capítulo 20. Importación de cuentas con datos auxiliares a partir de archivo CSV</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="pt03.html" title="Parte III. TRABAJANDO CON KEME"/><link rel="prev" href="ch19.html" title="Capítulo 19. Editar e introducir conceptos de cargo/abono del diario"/><link rel="next" href="ch21.html" title="Capítulo 21. Edición y alta de tipos de diario"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Capítulo 20. Importación de cuentas con datos auxiliares a partir de archivo CSV</th></tr><tr><td align="left"><a accesskey="p" href="ch19.html">Anterior</a> </td><th width="60%" align="center">Parte III. TRABAJANDO  CON KEME</th><td align="right"> <a accesskey="n" href="ch21.html">Siguiente</a></td></tr></table><hr/></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="idp92"/>Capítulo 20. Importación de cuentas con datos auxiliares a partir de archivo CSV</h2></div></div></div>
+        
+        <p>Esta característica nos va a permitir iniciar contabilidades desde cero de forma muy rápida.
+         Si disponemos de la información de clientes o proveedores, bastaría con formatear estos datos en
+          una hoja de cálculo y exportarlo en formato CSV. KEME se encargaría de dar de alta las cuentas auxiliares
+           con códigos correlativos y de colocar toda la información en el lugar correcto.
+        </p>
+        <p>La disposición de cada campo se realiza por columnas dispuestas con el siguiente orden</p>
+        <div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+								<p>Nombre/Razón social</p>
+						</li><li class="listitem">
+								<p>Nombre comercial</p>
+						</li><li class="listitem">
+								<p>Nif</p>
+						</li><li class="listitem">
+								<p>Domicilio</p>
+						</li><li class="listitem">
+								<p>Población</p>
+						</li><li class="listitem">
+								<p>Código Postal</p>
+						</li><li class="listitem">
+								<p>Provincia</p>
+						</li><li class="listitem">
+								<p>País</p>
+						</li><li class="listitem">
+								<p>IBAN</p>
+						</li><li class="listitem">
+								<p>Teléfono</p>
+						</li><li class="listitem">
+								<p>Email</p>
+						</li><li class="listitem">
+								<p>Observaciones</p>
+						</li></ul></div>
+           <p>A continuación se muestra un ejemplo de hoja con datos arbitrarios:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/csv_import_aux_hoja.png" width="540" alt="Hoja de importación de datos auxiliares"/></div>
+						</div>
+				</div>
+           
+           <p>El siguiente paso será grabar el  archivo en formato <span class="quote">“<span class="quote">csv</span>”</span> con tabuladores como separadores de campos,
+           sin delimitadores de cadenas de caracteres, y con codificación unicode (<span class="quote">“<span class="quote">utf8</span>”</span> ).</p>
+           <p>Desde KEME podremos ejectuar la opción del menú <span class="quote">“<span class="quote">Útiles</span>”</span>, <span class="quote">“<span class="quote">Importar cuentas auxilares con datos</span>”</span>.
+           Aparecerá una ventana de selección de archivos y posteriormente se realizará una petición de código de cuenta principal:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/import_ctas_pet_cuenta.png" width="540" alt="Petición cuenta principal"/></div>
+						</div>
+				</div>
+           <p>La aplicación se encargará de la numeración correcta de las nuevas cuentas auxiliares y de insertar los datos accesorios.</p>
+           
+		</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch19.html">Anterior</a> </td><td align="center"><a accesskey="u" href="pt03.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch21.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Capítulo 19. Editar e introducir conceptos de cargo/abono del diario </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Capítulo 21. Edición y alta de tipos de diario</td></tr></table></div></body></html>

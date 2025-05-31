@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Capítulo 37. Importar datos</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="pt03.html" title="Parte III. TRABAJANDO CON KEME"/><link rel="prev" href="ch36s04.html" title="Historial de diferencias por activo"/><link rel="next" href="ch37s02.html" title="Importar datos del diario"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Capítulo 37. Importar datos</th></tr><tr><td align="left"><a accesskey="p" href="ch36s04.html">Anterior</a> </td><th width="60%" align="center">Parte III. TRABAJANDO  CON KEME</th><td align="right"> <a accesskey="n" href="ch37s02.html">Siguiente</a></td></tr></table><hr/></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="idp137"/>Capítulo 37. Importar datos</h2></div></div></div><div class="toc"><p><strong>Tabla de contenidos</strong></p><dl class="toc"><dt><span class="sect1"><a href="ch37.html#idp28">Importar plan de cuentas</a></span></dt><dt><span class="sect1"><a href="ch37s02.html">Importar datos del diario</a></span></dt></dl></div>
+				
+				<p>En este apartado describimos una forma sencilla de captar los datos
+    de otras aplicaciones contables.</p>
+				<div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp28"/>Importar plan de cuentas</h2></div></div></div>
+						
+						<p>Nuestro objetivo es conseguir un fichero de texto tabulado en dos
+      columnas, la primera que contenga el código de cada grupo, subgrupo o
+      cuenta, y la segunda el nombre correspondiente. Para ello partimos, por
+      ejemplo, de un balance de sumas y saldos o de un listado de plan de cuentas generado por
+      la aplicación origen en un archivo en formato de texto tabulado.</p>
+						<p>El siguiente paso consistirá en abrir el archivo anterior con un
+      editor de texto; si utilizamos <span class="application">Emacs</span>, éste
+      suele detectar la codificación de caracteres automáticamente. Si
+      utilizamos el editor <span class="application">Kate</span>, tendremos que
+      especificar la codificación en el menú <span class="guimenu">Ver
+	</span> → <span class="guimenuitem">Especificar codificación
+      </span> → <span class="guimenuitem">Europeo occidental iso
+      8859</span>. En el editor seleccionaremos las líneas
+      que nos interesen y las copiaremos al portapapeles. Acto seguido
+      arrancaremos <span class="application">Openoffice</span> y crearemos una hoja
+      de cálculo vacía, donde pegaremos el contenido del portapapeles,
+      teniendo especial cuidado en seleccionar el juego de caracteres
+      apropiado (en nuestro caso el de Windows), y la separación
+      correspondiente (tabulador y texto separado por comillas):</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/importar_texto_tab_pasted1_bss.png" width="540" alt="Importar texto tabulado en OpenOffice"/></div>
+								</div>
+						</div>
+						<div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Importante</h3>
+								<p>Es imprescindible tener en cuenta e identificar correctamente el juego de
+	caracteres del que procede la información a importar, ya que en
+	caso contrario se puede generar un fichero de texto con caracteres
+	extraños y que, por tanto, no sería admitido por la base de datos.</p>
+						</div>
+						<p>Una vez pegada la información en la hoja de cálculo procederemos a
+      borrar los datos que no nos interesen, y nos quedaremos con dos
+      columnas. No deberá existir ninguna línea de descripción de campos como
+      cabecera, tan sólo códigos de cuenta y descripciones de cuenta:</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/edicion_plan_cuentas_oo.png" width="540" alt="Hoja de cálculo de OpenOffice con plan de cuentas"/></div>
+								</div>
+						</div>
+						<p>El siguiente paso será guardar el contenido de la hoja de cálculo
+      en un fichero de texto tabulado, sin separador de cadenas de
+      caracteres. Esto lo conseguiremos mediante la opción del menú de
+      <span class="application">OpenOffice</span>
+								<span class="guimenu">Archivo</span> → <span class="guimenuitem">Guardar como...</span>, donde especificaremos en
+      <acronym class="acronym">Tipo de archivo</acronym> la selección <acronym class="acronym">Texto CSV
+      (.csv;.txt):</acronym>
+						</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/dialogo_guardar_como_plan_oo.png" width="540" alt="Diálogo guardar como de OpenOffice"/></div>
+								</div>
+						</div>
+						<p>A continuación aparecerá un diálogo de exportación de texto, en el
+      que especificaremos el juego de caracteres <acronym class="acronym">Unicode
+      UTF-8</acronym>, el separador de campo como tabulador, y dejaremos en
+      blanco el separador de texto:</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/cuadro_exportacion_texto_oo.png" width="540" alt="Diálogo exportación de texto de OpenOffice"/></div>
+								</div>
+						</div>
+						<p>Ya tenemos el plan contable exportado listo para su incorporación
+      a nuestra aplicación, para ello tendremos que copiar el archivo generado
+      al directorio <code class="filename">.keme/</code>. No olvidemos que dicho
+      directorio aparecerá como oculto, por lo que si queremos que aparezca en
+      el navegador del sistema, deberemos habilitar que se muestre en
+      pantalla, esto se consigue en <span class="application">Konqueror</span>
+      mediante la opción del menú <span class="guimenu">Ver</span> → <span class="guimenuitem">Mostrar archivos ocultos</span>
+						</p>
+						<p>El último paso consistirá en crear una nueva empresa en la
+      contabilidad, en la que especificaremos el fichero del plan contable con
+      extensión <acronym class="acronym">.pln</acronym> generado en los pasos anteriores, para
+      ello seleccionaremos la opción del menú <span class="guimenu">Empresa </span> → <span class="guimenuitem">Nueva empresa</span>:</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/dialogo_nueva_empresa.png" width="540" alt="Diálogo nueva empresa"/></div>
+								</div>
+						</div>
+						<div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Importante</h3>
+								<p>Tenemos que especificar el número
+      de dígitos exacto de las subcuentas del plan importado; en caso
+      contrario la información contenida no será interpretada de forma
+      correcta.</p>
+						</div>
+						<p>Una vez concluido el proceso tendremos el Plan Contable
+      incorporado a nuestra contabilidad almacenado con el juego de caracteres
+      <acronym class="acronym">Unicode</acronym> que se caracteriza por su carácter internacional.</p>
+				</div>
+				
+		</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch36s04.html">Anterior</a> </td><td align="center"><a accesskey="u" href="pt03.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch37s02.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Historial de diferencias por activo </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Importar datos del diario</td></tr></table></div></body></html>

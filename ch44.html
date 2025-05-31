@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Capítulo 44. Asientos predefinidos</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="pt03.html" title="Parte III. TRABAJANDO CON KEME"/><link rel="prev" href="ch43s03.html" title="Importar/exportar regularizaciones"/><link rel="next" href="ch44s02.html" title="Asientos automáticos con partidas de IVA"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Capítulo 44. Asientos predefinidos</th></tr><tr><td align="left"><a accesskey="p" href="ch43s03.html">Anterior</a> </td><th width="60%" align="center">Parte III. TRABAJANDO  CON KEME</th><td align="right"> <a accesskey="n" href="ch44s02.html">Siguiente</a></td></tr></table><hr/></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="idp156"/>Capítulo 44. Asientos predefinidos</h2></div></div></div><div class="toc"><p><strong>Tabla de contenidos</strong></p><dl class="toc"><dt><span class="sect1"><a href="ch44.html#idp45">Creación y edición de asientos automáticos</a></span></dt><dd><dl><dt><span class="sect2"><a href="ch44.html#idp42">La definición de variables</a></span></dt><dt><span class="sect2"><a href="ch44.html#idp43">Especificación de asientos</a></span></dt><dt><span class="sect2"><a href="ch44.html#idp44">Ejemplo</a></span></dt></dl></dd><dt><span class="sect1"><a href="ch44s02.html">Asientos automáticos con partidas de IVA</a></span></dt><dt><span class="sect1"><a href="ch44s03.html">Generar apuntes en el diario a partir de asientos automáticos</a></span></dt><dt><span class="sect1"><a href="ch44s04.html">Importar y exportar asientos automáticos</a></span></dt></dl></div>
+				
+				<p>Los asientos automáticos o predefinidos constituyen un artificio basado en la definición de unas
+    variables y las interrelaciones entre ellas de tal forma que nos permiten
+    posteriormente la generación de asientos de forma automática a partir de
+    valores introducidos para estas variables. Esto posibilita, entre otras
+    cosas, la simplificación de tareas a la hora de introducir asientos
+    repetitivos o de carácter complejo.</p>
+				<div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp45"/>Creación y edición de asientos automáticos</h2></div></div></div>
+						
+						<p>Accedemos a estas funciones a través del submenú <span class="quote">“<span class="quote">Asientos
+      automáticos</span>”</span> de la opción del menú principal <span class="quote">“<span class="quote">Diario</span>”</span>. La
+      edición la realizaremos en la ventana correspondiente, en la que podemos
+      distinguir dos partes principales: <span class="quote">“<span class="quote">la definición de
+      variables</span>”</span> y la <span class="quote">“<span class="quote">especificación de asiento</span>”</span>:</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/asiento_modelo_edicion.png" width="540" alt="Edición de asiento modelo"/></div>
+								</div>
+						</div>
+						<p>En la parte inferior de la ventana podemos distinguir un cuadro de
+      texto que se utilizará para una mejor edición de fórmulas de la
+      especificación del asiento, y un campo en el que dispondremos la fecha
+      del asiento, haciendo referencia a una variable, indicando el valor de
+      una fecha, o también lo podremos dejar en blanco, en cuyo caso, la fecha de
+      asiento será asignada como la fecha del sistema. </p>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp42"/>La definición de variables</h3></div></div></div>
+								
+								<p>Las variables constarán de un nombre formado por caracteres
+	alfanuméricos que se dispondrá en la primera columna de la
+	tabla. Podrán ser de cinco tipos diferentes:</p>
+								<div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+												<p>Numérico: utilizadas para introducir valores numéricos a la
+	    hora de reproducir el asiento modelo.</p>
+										</li><li class="listitem">
+												<p>Fecha: se utilizan principalmente para asignar fecha al
+	    asiento, aunque también se podrían utilizar para confeccionar los
+	    conceptos de los pases.</p>
+										</li><li class="listitem">
+												<p>Caracteres: este tipo de variables se utiliza para componer
+	    conceptos de cargo/abono para los pases de los asientos.</p>
+										</li><li class="listitem">
+												<p>Subcuenta: serán sustituidas por códigos que conformarán las distintas
+	    cuentas que compondrán los asientos.</p>
+										</li><li class="listitem">
+												<p>NIF: el contenido de estas variables serán námeros de identificación fiscal que serán sustituidos por
+                       el código de cuenta auxiliar correspondiente	en el momento de ejecucián del asiento predefinido</p>
+										</li><li class="listitem">
+												<p>Código de imputación: para suministrar códigos de imputación
+	    que enlazarán las distintas partidas de ingresos y gastos con la
+	    contabilidad analítica.</p>
+										</li><li class="listitem">
+										  <p>Calculado: las variables calculadas servirán -entre otras cosas- para la verficación de los datos introducidos 
+										  y la mejora del diseño del  asiento cuando intervengan cálculos complejos. La expresión aritmética para
+										   el cálculo se introduce en la columna   <span class="quote">“<span class="quote">valor por defecto</span>”</span>. En la ejecución del asiento predefinid
+										   o este tipo de variables se muestran con el símbolo <span class="quote">“<span class="quote">*</span>”</span>  al final.</p>
+										</li></ul></div>
+								<p>La descripción de las variables estarán compuestas por los mensajes de texto que
+	aparecerán en la petición de datos a la hora de reproducir el asiento
+	automático.</p>
+								<p>La columna <span class="quote">“<span class="quote">VAL.DEFECTO</span>”</span> nos permite definir
+	valores por defecto a las variables definidas.</p>
+								<p>La columna <span class="quote">“<span class="quote">GUARD.</span>”</span> está compuesta por casillas de verificación para cada variable definida. La activación de este campo va a servir para que en la ejecución del asiento automático se guarde el último valor introducido por el usuario cuando se reinicie la plantilla. Esto es muy útil cuando definimos variables con valores que cambian poco.</p>
+								<p>En la parte derecha de la tabla donde especificamos las
+	variables están dispuestos tres botones: el botón con un
+	<span class="quote">“<span class="quote">aspa</span>”</span> elimina el elemento en curso de la tabla; los
+	botones con las flechas permiten alterar el orden de las variables en
+	la pantalla. Esto es importante ya que la disposición del cuadro será
+	la que se emplee a la hora de la petición de información cuando
+	reproduzcamos el asiento modelo.</p>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp43"/>Especificación de asientos</h3></div></div></div>
+								
+								<p>Esta sería la parte donde se interrelacionan las variables para
+	formar un asiento. Cada línea de la tabla se corresponderá con un
+	apunte contable, y estará compuesta por los siguientes campos:</p>
+								<div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+												<p>Cuenta: contendrá la subcuenta del apunte
+	    correspondiente. Podrá ser un valor de cuenta, tal como
+	    <span class="quote">“<span class="quote">570000000</span>”</span> o una expresión formada por una variable;
+	    en este caso, tendríamos que indicarla entre llaves
+	    (<span class="quote">“<span class="quote">{</span>”</span> y <span class="quote">“<span class="quote">}</span>”</span>).</p>
+										</li><li class="listitem">
+												<p>Concepto: contendrá una expresión literal, tal cual, sin
+	    caracteres delimitadores, o bien una expresión formada por
+	    variables de fecha o de caracteres, que se podrán combinar con cadenas de caracteres
+	    delimitados por comillas (ver ejemplo). Podremos añadir la
+	    descripción de una cuenta si encerramos el código respectivo entre
+	    llaves e indicamos el comando de descripción; por ejemplo:
+	    <span class="quote">“<span class="quote">{descrip:430}</span>”</span>
+												</p>
+										</li><li class="listitem">
+												<p>Expresión: será una expresión aritmética, en la que las
+	    variables (de tipo numérico) irán encerradas entre llaves. Cuando
+	    la expresión sea compleja o muy extensa, podemos utilizar el
+	    recuadro de edición de texto en la parte inferior de la ventana. </p>
+										</li><li class="listitem">
+												<p>Columna <span class="quote">“<span class="quote">D/H</span>”</span>: aquí especificaremos si el
+	    apunte será un cargo (anotación en el DEBE) o un abono (anotación
+	    en el HABER).</p>
+										</li><li class="listitem">
+												<p>C.I.: si nuestra empresa posee contabilidad analítica, esta
+	    columna se encargará de la recopilación de los códigos de
+	    imputación para cada pase de ingresos o gastos.</p>
+										</li></ul></div>
+								<p>La tabla de especificación del asiento posee más columnas aparte
+	de las descritas. Éstas se utilizan para la generación de apuntes en los
+	que intervengan partidas de IVA. Estos campos se tratarán en un
+	epígrafe posterior.</p>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp44"/>Ejemplo</h3></div></div></div>
+								
+								<p>Como ejemplo, vamos a confeccionar un asiento automático que automatice
+	la contabilización de las nóminas de un determinado mes. Excluimos
+	sofisticaciones tales como pagos en especie, anticipos de salarios,
+	etc.; tan sólo queremos utilizar un ejemplo para fines didácticos.</p>
+								<p>Comenzamos por describir las variables, para ello tenemos
+	primero que tener en cuenta cuales serán los datos de los que
+	dispondremos para completar el asiento. Suponemos que vamos
+	a conocer el importe bruto de las nóminas (variable
+	<span class="quote">“<span class="quote">BRUTO</span>”</span>), las retenciones por <acronym class="acronym">IRPF</acronym>
+	(variable <span class="quote">“<span class="quote">RETENCIONES</span>”</span>), el importe total de seguros
+	sociales (variable <span class="quote">“<span class="quote">SEGUROS</span>”</span>), los seguros sociales a
+	cargo de los trabajadores (<span class="quote">“<span class="quote">CUOTA_OBRERA</span>”</span>), la fecha del
+	asiento (<span class="quote">“<span class="quote">FECHA</span>”</span>), y una descripción del mes
+	correspondiente a las nóminas (<span class="quote">“<span class="quote">MES</span>”</span>). Esta última
+	variable se utilizará para componer los conceptos de los apuntes
+	contables.</p>
+								<p>Este ejemplo se corresponde con los datos que se muestran en la
+	figura situada al final de este apartado. Aquí podemos observar las
+	variables ya introducidas en la tabla correspondiente y cómo hemos especificado el tipo y
+	la descripción de las mismas que aparecerá en la petición de datos a la hora de la ejecución del
+	modelo.</p>
+								<p>En la tabla de especificación de asiento hemos introducido las
+	distintas líneas que componen el asiento. En la columna
+	de las cuentas van dispuestos unos valores literales que se corresponden
+	con códigos de nuestro plan contable.</p>
+								<p>Los conceptos contables están formados por una expresión que
+	combina una cadena de caracteres con la variable <span class="quote">“<span class="quote">MES</span>”</span>,
+	que contendrá el nombre del mes correspondiente a las nóminas a las
+	que haga referencia el asiento.</p>
+								<p>Como podemos observar, las dos primeras líneas se corresponden
+	con cargos (anotaciones en el <span class="quote">“<span class="quote">DEBE</span>”</span>), y las restantes
+	con abonos (anotaciones en el <span class="quote">“<span class="quote">HABER</span>”</span>).</p>
+								<p>Con respecto a las expresiones aritméticas utilizadas para calcular los
+	importes numéricos, observamos como las variables van encerradas entre
+	llaves (<span class="quote">“<span class="quote">{</span>”</span> y <span class="quote">“<span class="quote">}</span>”</span>). La expresión más
+	compleja es la introducida en la quinta línea (<span class="quote">“<span class="quote">{BRUTO}-{CUOTA_OBRERA}-{RETENCIONES}</span>”</span>), por ello utilizamos el
+	cuadro de edición de texto para su formulación.</p>
+								<div class="informalfigure">
+										<div class="screenshot">
+												<div class="mediaobject"><img src="graf/asiento_modelo_nominas.png" width="540" alt="Edición de asiento modelo"/></div>
+										</div>
+								</div>
+						</div>
+				</div>
+				
+				
+				
+		</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch43s03.html">Anterior</a> </td><td align="center"><a accesskey="u" href="pt03.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch44s02.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Importar/exportar regularizaciones </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Asientos automáticos con partidas de IVA</td></tr></table></div></body></html>

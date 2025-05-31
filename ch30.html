@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Capítulo 30. El balance de sumas y saldos</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="pt03.html" title="Parte III. TRABAJANDO CON KEME"/><link rel="prev" href="ch29.html" title="Capítulo 29. Volumen de operaciones con terceras personas"/><link rel="next" href="ch31.html" title="Capítulo 31. Conciliación de cuentas"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Capítulo 30. El balance de sumas y saldos</th></tr><tr><td align="left"><a accesskey="p" href="ch29.html">Anterior</a> </td><th width="60%" align="center">Parte III. TRABAJANDO  CON KEME</th><td align="right"> <a accesskey="n" href="ch31.html">Siguiente</a></td></tr></table><hr/></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="idp112"/>Capítulo 30. El balance de sumas y saldos</h2></div></div></div>
+				
+				<p>Para obtener balances de sumas y saldos ejecutaremos
+    <span class="guimenu">Consultas-</span> → <span class="guimenuitem">Balance de sumas y
+    saldos</span>. El cuadro de diálogo que aparece nos
+    permite muchas posibilidades:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/bss.png" width="540" alt="Balance de sumas y saldos"/></div>
+						</div>
+				</div>
+				<p>El primer grupo de casillas de verificación permite especificar el
+    nivel de detalle del balance; de esta forma podremos obtener información
+    valiosa para agrupados de cuenta, como por ejemplo, volumen de operaciones por zona si
+    tenemos los clientes clasificados en una cuenta por cada zona antes del
+    desglose final en subcuentas. Las casillas de verificación no son
+    excluyentes; podremos incluir todos los detalles que necesitemos.</p>
+				<p>En intervalo de fechas podremos especificar períodos superiores al
+    año natural. Aquí tendremos que tener en cuenta los tipos de diario que
+    formarán parte de la consulta para que ésta tenga significado.</p>
+				<p>Podemos acotar la consulta para un intervalo de cuentas. Ello
+    permite por ejemplo conocer el volumen de gasto desglosado en cuentas y
+    subcuentas de una determinada partida contable.</p>
+				<p>El grupo de casillas de verificación del <span class="quote">“<span class="quote">DIARIO</span>”</span>
+    permite la elección de las partes del diario que formarán parte del balance
+    de sumas y saldos. Si por ejemplo queremos conocer el volumen de gastos e
+    ingresos desglosado por cuentas, no incluiremos el diario de
+    <span class="quote">“<span class="quote">REGULARIZACIÓN</span>”</span>, ya que éste salda todas las cuentas del
+    grupo 6 y 7.</p>
+				<div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Importante</h3>
+						<p>Nunca se incluirá el diario de <span class="quote">“<span class="quote">CIERRE</span>”</span> en las
+      consultas, ya que por su propia naturaleza el proceso de cierre elimina
+      toda la información contable en lo que se refiere a los saldos de un
+      determinado período.</p>
+				</div>
+				<p>En el recuadro <span class="quote">“<span class="quote">Analítica</span>”</span> podremos acotar la emisión
+    del balance de sumas y saldos para códigos de imputación
+    determinados. Podremos emplear comodines en la confección de estos
+    códigos.</p>
+				<p>El botón <span class="quote">“<span class="quote">Imprimir</span>”</span> genera una copia impresa en alta
+    calidad directamente en la impresora. Si queremos generar un fichero
+    <acronym class="acronym">TEX</acronym> para incorporarlo a un libro de
+    contabilidad (por ejemplo el libro de balances), pulsaremos el botón
+    <span class="quote">“<span class="quote">Genera TEX</span>”</span>, tras lo cual se pedirá un nombre de archivo
+    (introducir el nombre del archivo sin especificar ninguna ruta o
+    directorio). Si dejamos el nombre en blanco, se generará el
+    balance en el archivo <code class="filename">bss.tex</code>.</p>
+				<p>A veces resulta interesante poder trabajar con la copia de un
+    balance de sumas y saldos en una hoja de cálculo. Ello permite, por
+    ejemplo, presentar balances de situación o cuentas de pérdidas y ganancias
+    configuradas de manera flexible y a nuestro gusto. También puede sernos
+    útil para preparar un inventario de cierre de ejercicio, como relación
+    detallada de bienes y derechos de nuestra empresa. El botón
+    <span class="quote">“<span class="quote">Copiar</span>”</span> permite pasar al portapapeles en formato de texto
+    tabulado toda la información del balance de sumas y saldos, que podrá ser
+    pegado sin ningún problema en una hoja de OpenOffice para su
+    proceso. También se genera un fichero <code class="filename">bss.txt</code> por si
+    se desea modificar algún componente antes de ser procesado por otra
+    aplicación.</p>
+				<p>
+						<span class="quote">“<span class="quote">Genera XML</span>”</span> exporta el balance de sumas y
+    saldos a un fichero XML; esto es ideal para utilizar un programa
+    externo de informes, tal como <span class="application">iReport</span>.</p>
+				<p>Recientemente se ha incorporado un botón para la consulta del mayor de cualquier cuenta que 
+    esté incluida en el balance de sumas y saldos.</p>
+				<p>La casilla de verificación <span class="quote">“<span class="quote">Columna de saldos
+    iniciales</span>”</span> permite obtener un balance de comprobación especial con
+    el saldo inicial en el inicio del período especificado en el intervalo de
+    fechas. Este tipo de documento contable se utiliza habitualmente en
+    algunos países iberoamericanos.</p>
+		</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch29.html">Anterior</a> </td><td align="center"><a accesskey="u" href="pt03.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch31.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Capítulo 29. Volumen de operaciones con terceras personas </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Capítulo 31. Conciliación de cuentas</td></tr></table></div></body></html>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Comprobación del entorno PostgreSQL operativo bajo Linux</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="ch05.html" title="Capítulo 5. Instalación"/><link rel="prev" href="ch05.html" title="Capítulo 5. Instalación"/><link rel="next" href="ch05s03.html" title="Instalación de Postgresql bajo Windows"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Comprobación del entorno PostgreSQL operativo bajo Linux</th></tr><tr><td align="left"><a accesskey="p" href="ch05.html">Anterior</a> </td><th width="60%" align="center">Capítulo 5. Instalación</th><td align="right"> <a accesskey="n" href="ch05s03.html">Siguiente</a></td></tr></table><hr/></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp63"/>Comprobación del entorno PostgreSQL operativo bajo Linux</h2></div></div></div>
+						
+						<p>Si vamos a utilizar <span class="application">PostgreSQL</span> como
+      gestor de bases de datos, el primer paso será asegurarnos de que
+    esté correctamente instalado y en
+    ejecución. Para ello podemos cargar en el ordenador donde se supone que se
+    esté ejecutando el servidor <span class="application">Postgres</span> la base de datos
+    <acronym class="acronym">template1</acronym> mediante el programa monitor <span class="application">psql</span> desde
+    la línea de comandos de la siguiente forma:</p>
+						<pre class="screen">
+								<code class="prompt">pepe@mortadelo:~</code><strong class="userinput"><code>psql template1</code></strong>
+								<code class="computeroutput">No se pudo conectar con el servidor; No existe el fichero o el directorio</code>
+								<code class="computeroutput">Está el servidor en ejecución localmente y aceptando conexiones</code>
+								<code class="computeroutput">en el socket de dominio Unix /tmp/.s.PGSQL.5432 ?</code>
+						</pre>
+						<p>Si obtenemos un mensaje parecido al anterior, esto es señal de que
+    hemos instalado los binarios pero el servidor no está en ejecución.</p>
+						<p>Para concluir la instalación de <span class="application">Postgres</span>
+    deberemos de crear usuarios distintos al administrador de bases de datos
+    <span class="foreignphrase"><em class="foreignphrase">postgres</em></span>. Para ello accederemos como
+    usuario <span class="foreignphrase"><em class="foreignphrase">postgres</em></span> y emplearemos el
+    programa <span class="application">createuser</span> bajo la línea de
+    comandos. Es interesante introducir un código de usuario que coincida con
+    el nuestro propio del sistema operativo linux (en nuestro caso sería, por
+    ejemplo, el usuario <span class="quote">“<span class="quote">pepe</span>”</span>), ya que esto simplificará la
+    conexión a la base de datos local (tan sólo tendremos que suministrar el
+    nombre de la base de datos, pudiendo dejar en blanco el código de usuario,
+    el nombre del <span class="foreignphrase"><em class="foreignphrase">host</em></span>, etc). A continuación se
+    muestra una pantalla en la que se realiza esta operación:</p>
+						<pre class="screen">
+								<code class="prompt">pepe@MORTADELO:~</code><strong class="userinput"><code>su</code></strong>
+								<code class="computeroutput">Password:</code>
+								<code class="prompt">MORTADELO:/home/pepe #</code><strong class="userinput"><code>su postgres</code></strong>
+								<code class="prompt">postgres@MORTADELO:/home/pepe #</code><strong class="userinput"><code>createuser pepe</code></strong>
+								<code class="computeroutput">Debe permitírsele al usuario la creación de bases de datos? (s/n)</code>
+								<strong class="userinput"><code>s</code></strong>
+								<code class="computeroutput">Debe permitírsele al usuario la creación de otros usuarios? (s/n)</code>
+								<strong class="userinput"><code>s</code></strong>
+								<code class="computeroutput">CREATE USER</code>
+								<code class="prompt">postgres@MORTADELO:/home/pepe</code>
+						</pre>
+						<p>Por último sería interesante modificar algunos
+    parámetros de sus ficheros de configuración. Para ello nos situaremos en
+    el directorio donde residan, que coincidirá con el suministrado para
+    almacenar los datos en <span class="application">initdb</span>; éste sería, por
+    ejemplo, en nuestro caso (distribución <acronym class="acronym">Suse</acronym>)
+    <code class="filename">/var/lib/pgsql/data</code>.</p>
+						<div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Sugerencia</h3>
+								<p>Para acceder a este directorio tendremos que hacerlo bajo el
+      usuario <span class="foreignphrase"><em class="foreignphrase">postgres</em></span>, o bajo <span class="foreignphrase"><em class="foreignphrase">root</em></span>
+								</p>
+						</div>
+						<p>Los puntos propuestos a modificar de la configuración del servidor
+    de bases de datos
+    <span class="application">Postgres</span> serían los
+    siguientes:</p>
+						<div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+										<p>En el fichero <code class="filename">postgresql.conf</code>, podremos
+	editar parámetros tales como el número máximo de conexiones
+	permitidas, encriptado de la contraseña de acceso, variables para el
+	mantenimiento de la base de datos (como
+	<span class="foreignphrase"><em class="foreignphrase">autovacuum</em></span>), etc.</p>
+								</li><li class="listitem">
+										<p>En el fichero <code class="filename">pg_hba.conf</code> elegiremos el
+	esquema bajo el cual se puedan conectar los distintos usuarios y
+	equipos al servidor de bases de datos. El menos restrictivo es aquel
+	en el que se permite la conexión de cualquier máquina y
+	usuario. Nosotros lo adaptaremos a nuestras necesidades de seguridad.</p>
+								</li></ul></div>
+						<p>Muchas veces el proceso de instalación de Postgres a partir de
+      algún paquete binario es totalmente automático, siendo tan sólo
+      necesaria la creación de un usuario tal y como se ha descrito. Esto
+      ocurre por ejemplo en distribuciones tales como Ubuntu o Debian</p>
+				</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch05.html">Anterior</a> </td><td align="center"><a accesskey="u" href="ch05.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch05s03.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Capítulo 5. Instalación </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Instalación de Postgresql bajo Windows</td></tr></table></div></body></html>

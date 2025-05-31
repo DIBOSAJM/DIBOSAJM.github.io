@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Conciliación bancaria sobre información importada conforme al cuaderno 43 de la AEB</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="ch31.html" title="Capítulo 31. Conciliación de cuentas"/><link rel="prev" href="ch31s02.html" title="Conciliación de cuentas manual"/><link rel="next" href="ch32.html" title="Capítulo 32. La contabilidad analítica"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Conciliación bancaria sobre información importada conforme al
+      cuaderno 43 de la AEB</th></tr><tr><td align="left"><a accesskey="p" href="ch31s02.html">Anterior</a> </td><th width="60%" align="center">Capítulo 31. Conciliación de cuentas</th><td align="right"> <a accesskey="n" href="ch32.html">Siguiente</a></td></tr></table><hr/></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp115"/>Conciliación bancaria sobre información importada conforme al
+      cuaderno 43 de la AEB</h2></div></div></div>
+						
+						<p>Este mecanismo nos permite realizar la conciliación bancaria de
+      forma semi-automática, a través de la importación de información de
+      cuentas corrientes bancarias. La principal ventaja es que se realiza el
+      punteado de forma automática.</p>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp14"/>Importar Cuaderno 43</h3></div></div></div>
+								
+								<p>Esta opción del menú de conciliación permite captar la
+	información de un fichero de cuenta bancaria conforme al cuaderno 43
+	de la Asociación Española de Banca. Tras seleccionar la cuenta
+	correspondiente de nuestra contabilidad, la aplicación nos presentará
+	un mensaje de advertencia, y pasaremos a un cuadro de selección de archivo:</p>
+								<div class="informalfigure">
+										<div class="screenshot">
+												<div class="mediaobject"><img src="graf/selecc43.png" width="540" alt="Selección cuaderno 43"/></div>
+										</div>
+								</div>
+								<p>Tras un mensaje de confirmación, el archivo se habrá importado
+	correctamente. No se sobreescribirán apuntes de fechas ya importadas
+	con anterioridad; de esta forma nos aseguramos de que no se pierda la
+	información relativa a conciliaciones anteriores.</p>
+	
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp15"/>Importar información a partir de ficheros CSV</h3></div></div></div>
+						
+						<p>Muchas veces poseemos información de cuentas que deseamos conciliar y que no está registrada en cuadernos 43. 
+						Esto puede ocurrir, por ejemplo, cuando deseamos comprobar cuentas de proveedores o clientes. 
+						Estos registros se pueden formatear y grabar fácilmente en archivos CSV utilizando una hoja de cálculo.</p>
+						<p>En  KEME hemos añadido la posibilidad de importar la información de la conciliación 
+						a partir de ficheros CSV. La disposició y el orden de los campos a importar sería la siguiente:</p>
+						<div class="itemizedlist"><ul class="itemizedlist"><li class="listitem"><p>Fecha en formato dd/mm/aaaa</p></li><li class="listitem"><p>Concepto de cargo/abono</p></li><li class="listitem"><p>Valor del apunte (en positivo o en negativo)</p></li><li class="listitem"><p>Saldo</p></li></ul></div>
+						<p>Los registros se guardarán con campos separados por tabuladores, y sin delimitadores de cadenas de caracteres</p>
+						</div>
+						
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp16"/>Contabilización automática vencimientos a partir de Cuaderno 43 importado</h3></div></div></div>
+						
+						<p>Esta función permite el procesado automático de los vencimientos registrados a partir de la comparación 
+						de los registros de KEME con la información importada de un cuaderno 43.</p>
+								<div class="informalfigure">
+										<div class="screenshot">
+												<div class="mediaobject"><img src="graf/venci_43.png" width="540" alt="vencimientos cuaderno 43"/></div>
+										</div>
+								</div>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp17"/>Conciliación de la cuenta importada</h3></div></div></div>
+								
+								<p>A través de la opción del menú
+	<span class="guimenu">Cuentas Bancarias C43</span> → <span class="guimenuitem">Concilia
+	importada</span>
+	accederemos al cuadro de diálogo:</p>
+								<div class="informalfigure">
+										<div class="screenshot">
+												<div class="mediaobject"><img src="graf/conc43.png" width="540" alt="Conciliación, cuenta externa"/></div>
+										</div>
+								</div>
+								<p>En el campo etiquetado como <span class="quote">“<span class="quote">Margen fechas (días)</span>”</span>
+	podremos establecer un intervalo de confianza entre fechas para la
+	conciliación; de esta forma podremos obviar el problema bastante común
+	de la conciliación de partidas en fechas que varíen pocos días con
+	respecto a
+	la anotación en el banco.</p>
+								<p>El botón <span class="quote">“<span class="quote">Conciliación automática</span>”</span> realizará todo
+	el proceso automático de punteo para el intervalo de fechas seleccionado.</p>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp18"/>Generación automática de asientos a partir de información de cuenta externa</h3></div></div></div>
+						
+						<p>Existe la posibilidad de especificar un filtro por contenido en el campo concepto. Los registros
+						que no nos interese procesar se pueden esconder mediante el botón <span class="quote">“<span class="quote">Oculta Línea</span>”</span>. <span class="quote">“<span class="quote">Contabilizar</span>”</span>
+						permite añadir por lotes los asientos correspondientes a la información mostrada.</p>
+								<div class="informalfigure">
+										<div class="screenshot">
+												<div class="mediaobject"><img src="graf/conci_externa_c43.png" width="540" alt="Conciliación, cuenta externa"/></div>
+										</div>
+								</div>
+						<p>Las contrapartidas de los apuntes a generar se especificarán de acuerdo con la información que introduciremos
+						en la siguiente ventana (tras pulsar <span class="quote">“<span class="quote">Contabilizar</span>”</span>)</p>
+								<div class="informalfigure">
+										<div class="screenshot">
+												<div class="mediaobject"><img src="graf/contrapartida_c43.png" width="540" alt="Conciliación, cuenta externa"/></div>
+										</div>
+								</div>
+						<p>Para contabilizar asientos simples con una sola contrapartida bastará con rellenar el primer campo y el concepto 
+						del asiento. El checkbox <span class="quote">“<span class="quote">Verificar primer asiento</span>”</span> sirve para que se abra una ventana de edición. De esta forma podremos
+						 verificar si el proceso es correcto, ofreciendo la posibilidad seguir con el proceso o cancelarlo.</p>
+						 <p>Podemos confeccionar asientos más complejos estableciendo una cuenta para una segunda contrapartida y un valor que podrá
+						  ser fijo o un coeficiente sobre el primer apunte (podrá tomar valores negativos).</p>
+						</div>
+						
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp19"/>Borrar información importada</h3></div></div></div>
+								
+								<p>La opción del menú <span class="quote">“<span class="quote">Borrar importado</span>”</span> permite la
+	eliminación de la información captada conforme al Cuaderno 43 a partir
+	de una determinada fecha. La
+	principal utilidad de esta función es la de corregir posibles errores
+	en la importación de información.</p>
+						</div>
+				</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch31s02.html">Anterior</a> </td><td align="center"><a accesskey="u" href="ch31.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch32.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Conciliación de cuentas manual </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Capítulo 32. La contabilidad analítica</td></tr></table></div></body></html>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Apuntes de IVA</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="ch22.html" title="Capítulo 22. Introducir nuevos asientos"/><link rel="prev" href="ch22s03.html" title="Conceptos de cargo/abono."/><link rel="next" href="ch22s05.html" title="Pasar apuntes a espera"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Apuntes de IVA</th></tr><tr><td align="left"><a accesskey="p" href="ch22s03.html">Anterior</a> </td><th width="60%" align="center">Capítulo 22. Introducir nuevos asientos</th><td align="right"> <a accesskey="n" href="ch22s05.html">Siguiente</a></td></tr></table><hr/></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp97"/>Apuntes de IVA</h2></div></div></div>
+						
+						<p>Para un cuadre perfecto entre los mayores de las cuentas de IVA
+      soportado y repercutido con los libros de facturas emitidas/recibidas,
+      cada vez que introduzcamos una cuenta configurada como de IVA (ya sea soportado
+      o repercutido) e intentemos realizar una anotación en el debe o el
+      haber, se activarán los diálogos correspondientes para registrar la información en las tablas correspondientes. Si solo queremos realizar una regularización, activaremos la casilla de verificación <span class="quote">“<span class="quote">Regularización IVA</span>”</span>
+						</p>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp7"/>Apuntes de IVA soportado</h3></div></div></div>
+								
+								<p>Si la cuenta a la que hace referencia el apunte es de IVA
+	soportado se desplegará en pantalla el siguiente diálogo:</p>
+								<div class="informalfigure">
+										<div class="screenshot">
+												<div class="mediaobject"><img src="graf/iva_soportado.png" width="540" alt="IVA soportado"/></div>
+										</div>
+								</div>
+								<p>En esta ventana completaremos todos los campos necesarios para
+	que se genere correctamente el registro del libro de facturas emitidas.</p>
+								<p>El campo <span class="quote">“<span class="quote">Cuenta base</span>”</span> no es obligatorio; de hecho
+	el importe del IVA que registramos podría haber sido generado por
+	varias cuentas base (por ejemplo, en caso de que el proveedor facture
+	diversas familias de productos y las contabilicemos en cuentas
+	separadas). De todas formas, el registrar la cuenta base
+	puede sernos útil en un futuro para discernir qué IVA soportado
+	pertenece a inversiones, y cual a bienes corrientes (estos datos son
+	requeridos al rellenar el impreso 390). </p>
+								<p>La casilla de verificación y el campo correspondiente a la
+	<span class="quote">“<span class="quote">prorrata</span>”</span> nos van a permitir cumplir nuestras
+	obligaciones registrales para aquellos supuestos en que nuestra
+	empresa esté sometida a este régimen.</p>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp8"/>Apuntes de IVA repercutido</h3></div></div></div>
+								
+								<p>Tras realizar un cargo o un abono en un apunte en que figura una
+	cuenta de IVA repercutido, aparecerá el diálogo siguiente:</p>
+								<div class="informalfigure">
+										<div class="screenshot">
+												<div class="mediaobject"><img src="graf/iva_repercutido.png" width="540" alt="IVA repercutido"/></div>
+										</div>
+								</div>
+								<p>La ventana es bastante similar a la del IVA soportado, sólo que
+	en ésta aparece algún elemento más, como el recargo de equivalencia, cuya utilidad
+	tendrá significado según el tipo de IVA que seleccionemos.</p>
+								<p>La casilla de verificación <span class="quote">“<span class="quote">Factura rectificativa</span>”</span>
+	permite guardar los datos del IVA repercutido de forma tal que a la
+	hora de confeccionar los libros de facturas emitidas podamos hacer
+	mención a las facturas rectificativas de forma separada.</p>
+								<p>La versión 2.9.3 introduce campos de nombre y cif para los libro de facturas
+       emitidas/recibidas. Se pueden utilizar para aquellos supuestos de operaciones
+       aisladas en los que no merezca la pena dar de alta una nueva cuenta auxiliar</p>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp9"/>Adquisiciones intracomunitarias de bienes/servicios y otras operaciones de inversión del
+	sujeto pasivo</h3></div></div></div>
+								
+								<p>Las
+	adquisiciones intracomunitarias de bienes generan un apunte de IVA
+	soportado, y a la vez un apunte de IVA repercutido con el mismo
+	importe. Con anterioridad al año 2004 era obligatorio emitir una
+	autofactura que tenía que acompañar al documento original de compra
+	para poder deducirnos el IVA soportado. Esta obligación ha
+	desaparecido en la actualidad.</p>
+								<p>Para procesar una <acronym class="acronym">AIB</acronym> introduciremos la operación
+	tal cual, sin hacer mención a ninguna cuenta de IVA; no nos
+	olvidaremos de activar la casilla de verificación <span class="quote">“<span class="quote">Adquisición
+	intracomunitaria de bienes</span>”</span>. Cuando pulsemos el botón
+	<span class="quote">“<span class="quote">Aceptar</span>”</span> aparecerá un cuadro de diálogo para que
+	suministremos información suplementaria sobre la operación:</p>
+								<div class="informalfigure">
+										<div class="screenshot">
+												<div class="mediaobject"><img src="graf/iva_aib.png" width="540" alt="IVA AIB"/></div>
+										</div>
+								</div>
+								<p>Las casillas de verificación que comienzan con "ISP" sirven para identificar
+	aquellas operaciones en las que se produce la inversión del sujeto
+	pasivo; esto suele ocurrir en aquellos casos en que se adquieren
+	servicios (no bienes, en cuyo caso la operación sería una A.I.B) de
+	profesionales residentes en otros países europeos o del exterior de la Unión Aduanera. 
+	También hay determinadas operaciones interiores de inversión del sujeto pasivo.
+	 En estos casos procede la elaboración de una autofactura y su registro en los libros
+	de facturas del IVA.</p>
+								<p>En la parte inferior de la ventana podemos encontrar el campo
+	correspondiente a la prorrata; nos permitirá cumplir con los
+	requisitos legales de registro de la AIB para aquellas empresas que
+	está sujetas a la regla de la prorrata.</p>
+								<p>Tras completar el cuadro de diálogo, el asiento quedará
+	registrado con los pases de IVA soportado y repercutido, y se habrán
+	generado los apuntes necesarios en los libros de facturas emitidas y recibidas.</p>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp10"/>Entregas intracomunitarias de bienes</h3></div></div></div>
+								
+								<p>Las operaciones intracomunitarias de bienes están exentas pero
+	sujetas al impuesto sobre el valor añadido; es por ello que se han de
+	registrar convenientemente en los libros del IVA; esta información de
+	registro también hará falta para cumplimentar las declaraciones
+	informativas para la Hacienda Pública.</p>
+								<p>Para registrar convenientemente una EIB, chequearemos la casilla
+	de verificación <span class="quote">“<span class="quote">Entrega intracomunitaria de
+	bienes</span>”</span>. Cuando terminemos el asiento pulsando el botón
+	<span class="quote">“<span class="quote">Aceptar</span>”</span>, aparecerá el cuadro de diálogo:</p>
+								<div class="informalfigure">
+										<div class="screenshot">
+												<div class="mediaobject"><img src="graf/iva_eib.png" width="540" alt="IVA EIB"/></div>
+										</div>
+								</div>
+								<p>La cumplimentación del diálogo registrará convenientemente la
+	operación a efectos de los libros del IVA y para la confección de las
+	declaraciones informativas.</p>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp11"/>Registrar operaciones de IVA exento/no sujetas en los libros de facturas</h3></div></div></div>
+								
+								<p>Hay operaciones de compra-venta de bienes o servicios que están
+	sujetas al IVA/IGIC pero son exentas. En estos casos nos vemos
+	obligados a su registro con tipo impositivo de IVA cero.</p>
+								<p>Para realizar la contabilización conveniente de estos supuestos,
+	chequearemos la casilla de verificación <span class="quote">“<span class="quote">Registrar op. exenta en
+	Libros de Facturas</span>”</span>; no suministraremos cuenta de IVA alguna en
+	la tabla de edición de asientos, ya que no procede ningún cargo o
+	abono por este concepto.</p>
+								<p>Cuanto pulsemos el botón <span class="quote">“<span class="quote">INCORPORAR</span>”</span> se activará
+	el cuadro de diálogo:</p>
+								<div class="informalfigure">
+										<div class="screenshot">
+												<div class="mediaobject"><img src="graf/op-exenta.png" width="540" alt="IVA operación exenta"/></div>
+										</div>
+								</div>
+						</div>
+				</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch22s03.html">Anterior</a> </td><td align="center"><a accesskey="u" href="ch22.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch22s05.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Conceptos de cargo/abono. </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Pasar apuntes a espera</td></tr></table></div></body></html>

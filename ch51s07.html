@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Copia de seguridad</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="ch51.html" title="Capítulo 51. Utilidades"/><link rel="prev" href="ch51s06.html" title="Cambiar elementos de apuntes contables"/><link rel="next" href="ch51s08.html" title="Recuperar copias de seguridad"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Copia de seguridad</th></tr><tr><td align="left"><a accesskey="p" href="ch51s06.html">Anterior</a> </td><th width="60%" align="center">Capítulo 51. Utilidades</th><td align="right"> <a accesskey="n" href="ch51s08.html">Siguiente</a></td></tr></table><hr/></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp172"/>Copia de seguridad</h2></div></div></div>
+						
+						<p>Esta opción del menú <span class="guimenu">Utilidades</span> realiza una
+      copia de seguridad de la empresa a la que estemos
+      conectado en el momento. Se generará un fichero compuesto por el nombre
+      de la base de datos, más la fecha y hora en formato <span class="quote">“<span class="quote">aa/mm/dd-hhmm</span>”</span>. La
+      fecha dispuesta de esta forma facilita la consulta de los ficheros de
+      copia de seguridad ya que si se consultan ordenados por nombre, el orden se
+      realizará de forma cronológica.</p>
+						<p>Si utilizamos <span class="application">Postgres</span> no se efectuarán copias de seguridad a
+      bases de datos a las que se tenga que acceder por clave. En este caso
+      podemos emplear el programa <span class="application">pg_dump</span>
+      suministrado por el paquete <span class="application">Postgres</span> (al fin
+      y al cabo esta utilidad es la que emplea nuestra aplicación para realizar la
+      copia). Para ello, desde la línea de comandos de una consola de texto
+      escribiremos <strong class="userinput"><code>pg_dump bd  copia.sql</code></strong>, donde
+      sustituiremos la cadena <span class="quote">“<span class="quote">bd</span>”</span> por el nombre de la base de
+      datos, y <span class="quote">“<span class="quote">copia.sql</span>”</span> por el nombre del fichero que deseemos
+      generar. Si la base de datos está en otro
+      <span class="foreignphrase"><em class="foreignphrase">host</em></span>, emplearemos la opción
+      <span class="quote">“<span class="quote">-h</span>”</span> para ejecutar pg_dump: <strong class="userinput"><code>pg_dump -h pepe bd 
+      copia.sql</code></strong>, donde <span class="quote">“<span class="quote">pepe</span>”</span> será sustituido por el
+      nombre del ordenador donde está guardada la base de datos.</p>
+				</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch51s06.html">Anterior</a> </td><td align="center"><a accesskey="u" href="ch51.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch51s08.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Cambiar elementos de apuntes contables </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Recuperar copias de seguridad</td></tr></table></div></body></html>

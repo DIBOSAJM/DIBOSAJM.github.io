@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Suministro de Información Inmediata (SII)</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="ch35.html" title="Capítulo 35. El Impuesto sobre el Valor Añadido"/><link rel="prev" href="ch35s08.html" title="Modelo 340"/><link rel="next" href="ch36.html" title="Capítulo 36. Amortizaciones"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Suministro de Información Inmediata (SII)</th></tr><tr><td align="left"><a accesskey="p" href="ch35s08.html">Anterior</a> </td><th width="60%" align="center">Capítulo 35. El Impuesto sobre el Valor Añadido</th><td align="right"> <a accesskey="n" href="ch36.html">Siguiente</a></td></tr></table><hr/></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp132"/>Suministro de Información Inmediata (SII)</h2></div></div></div>
+
+<p>KEME soporta el envío de comunicaciones con el Suministro Inmediato de la Información a nivel de IVA.</p>
+<p>Esta funcionalidad requiere una configuración previa; tendremos que suministrar los enlaces a 
+las web services de la Agencia Tributaria. Para ello accederemos a la opción del menú IVA: 
+                    <span class="guimenu">SII</span> → <span class="guimenuitem">URL'S SII</span>:
+						</p><div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/direcciones_web_services_aeat.png" width="540" alt="Direcciones web services SII"/></div>
+								</div>
+						</div><p>
+</p>
+<p>Hay dos opciones en el menú IVA que nos permitirán la comunicación de los datos 
+referentes a los libros de facturas emitidas y recibidas.</p>
+<p>Para proceder, seleccionaremos dentro de la ventana correspondiente el período de comunicación.
+El botón <span class="quote">“<span class="quote">Envío Pruebas</span>”</span> nos puede servir para cerciorarnos de que la información es correcta
+antes de proceder a un envío real.
+ </p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/facturas_sii.png" width="540" alt="Ventana facturas SII"/></div>
+								</div>
+						</div>				
+<p>Conforme vayamos suministrando datos, los campos de la columna <span class="quote">“<span class="quote">Enviada</span>”</span> se irán activando; 
+esto nos permitirá el control de facturas comunicadas, impidiendo la comunicación de registros repetidos.</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/facturas_sii_env.png" width="540" alt="Ventana facturas SII"/></div>
+								</div>
+						</div>				
+<p>Si activamos algún campo de la columna <span class="quote">“<span class="quote">No Envío</span>”</span> impediremos la comunicación del 
+registro especificado en la generación del fichero XML</p>
+<p>El botón <span class="quote">“<span class="quote">Genera XML</span>”</span> confecciona el archivo de comunicación para el envío de forma manual desde 
+el portal SII de la Agencia Tributaria.</p>
+<p>Los botones Envío Real y Envío Pruebas permiten enlazar directamente con el servidor SOAP de la Agencia Tributaria  y comunicar  el 
+envío del libro registro,  ya sea al servidor real o al de pruebas, respectivamente.:
+</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/seleccion_certificado.png" width="540" alt="Selección certificado digital"/></div>
+								</div>
+						</div>				
+<p>Para este cometido tendremos que disponer de un certificado de usuario válido, 
+con la clave primaria protegida por contraseña. Nos vale cualquier fichero con extensión <span class="quote">“<span class="quote">pfx</span>”</span> ó <span class="quote">“<span class="quote">p12</span>”</span>
+exportados desde cualquier navegador.</p>
+<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/clave_certificado.png" width="540" alt="Clave certificado digital"/></div>
+								</div>
+						</div>
+  <p>Tras el envío de la comunicación obtendremos una ventana con la respuesta:</p>
+  <div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/respuesta_sii.png" width="540" alt="Clave certificado digital"/></div>
+								</div>
+						</div>
+<p>Los botones <span class="quote">“<span class="quote">Rectifica Real</span>”</span> y <span class="quote">“<span class="quote">Rectifica Pruebas</span>”</span> permiten la corrección de facturas enviadas.
+Para que sean admitidas no tienen que haber experimentado ningún cambio en el documento, fecha e importe.</p>
+<p>El botón <span class="quote">“<span class="quote">Comprueba NIF's</span>”</span> realiza una comprobación de la calidad de datos identificativos en el servicio 
+web correspondiente de la Agencia Tributaria</p>
+<p>En la tabla de edición de asientos disponemos de campos para registrar el Concepto SII de cada factura</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/tabla_concepto_sii.png" width="540" alt="Concepto SII"/></div>
+								</div>
+						</div>				
+</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch35s08.html">Anterior</a> </td><td align="center"><a accesskey="u" href="ch35.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch36.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Modelo 340 </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Capítulo 36. Amortizaciones</td></tr></table></div></body></html>

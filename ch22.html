@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Capítulo 22. Introducir nuevos asientos</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="pt03.html" title="Parte III. TRABAJANDO CON KEME"/><link rel="prev" href="ch21.html" title="Capítulo 21. Edición y alta de tipos de diario"/><link rel="next" href="ch22s02.html" title="Dar de alta nuevas cuentas auxiliares desde la tabla de edición de asientos"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Capítulo 22. Introducir nuevos asientos</th></tr><tr><td align="left"><a accesskey="p" href="ch21.html">Anterior</a> </td><th width="60%" align="center">Parte III. TRABAJANDO  CON KEME</th><td align="right"> <a accesskey="n" href="ch22s02.html">Siguiente</a></td></tr></table><hr/></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="idp94"/>Capítulo 22. Introducir nuevos asientos</h2></div></div></div><div class="toc"><p><strong>Tabla de contenidos</strong></p><dl class="toc"><dt><span class="sect1"><a href="ch22.html#idp6">Búsqueda de subcuentas en la tabla de edición de asientos</a></span></dt><dt><span class="sect1"><a href="ch22s02.html">Dar de alta nuevas cuentas auxiliares desde la tabla de edición de asientos</a></span></dt><dt><span class="sect1"><a href="ch22s03.html">Conceptos de cargo/abono.</a></span></dt><dt><span class="sect1"><a href="ch22s04.html">Apuntes de IVA</a></span></dt><dd><dl><dt><span class="sect2"><a href="ch22s04.html#idp7">Apuntes de IVA soportado</a></span></dt><dt><span class="sect2"><a href="ch22s04.html#idp8">Apuntes de IVA repercutido</a></span></dt><dt><span class="sect2"><a href="ch22s04.html#idp9">Adquisiciones intracomunitarias de bienes/servicios y otras operaciones de inversión del
+	sujeto pasivo</a></span></dt><dt><span class="sect2"><a href="ch22s04.html#idp10">Entregas intracomunitarias de bienes</a></span></dt><dt><span class="sect2"><a href="ch22s04.html#idp11">Registrar operaciones de IVA exento/no sujetas en los libros de facturas</a></span></dt></dl></dd><dt><span class="sect1"><a href="ch22s05.html">Pasar apuntes a espera</a></span></dt><dt><span class="sect1"><a href="ch22s06.html">Editar códigos de imputación</a></span></dt><dt><span class="sect1"><a href="ch22s07.html">Pegar información</a></span></dt><dt><span class="sect1"><a href="ch22s08.html">Consulta de mayor desde la tabla de edición de asientos</a></span></dt><dt><span class="sect1"><a href="ch22s09.html">Copiar documento en cada línea</a></span></dt><dt><span class="sect1"><a href="ch22s10.html">Elección de tipos de diario</a></span></dt></dl></div>
+				
+				<p>Hay dos formas distintas de introducir apuntes contables. Una de
+    ellas es la de generar un fichero de texto tabulado que podrá ser
+    importado a través de la opción del menú
+    <span class="guimenu">Utilidades-</span> → <span class="guimenuitem">Importar-</span> → <span class="guimenuitem">Importar
+    asientos</span>. Este proceso se describe en el apartado
+    <span class="quote">“<span class="quote">Importar datos</span>”</span>.</p>
+				<p>La otra forma es más interactiva y se realiza a través de la tabla de
+    apuntes. Para acceder a este diálogo, basta con seleccionar
+    <span class="guimenu">Diario-</span> → <span class="guimenuitem">Nuevo asiento</span>, nos
+    aparecerá entonces la siguiente pantalla:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/tabla.png" width="540" alt="Tabla de asientos"/></div>
+						</div>
+				</div>
+				<p>Para introducir información en la tabla de asientos pasaremos de
+    columna a columna pulsando la tecla <span class="keysym">TAB</span>; para completar
+    una línea pulsaremos la tecla <span class="keysym">INTRO</span>. A medida que vaya
+    continuando la edición se irán actualizando los distintos elementos del
+    cuadro de diálogo y se detectará el cuadre del asiento, en cuyo caso
+    bastará pulsar <span class="keysym">INTRO</span> para su incorporación definitiva al
+    libro diario.</p>
+				<p>Podremos navegar hacia cualquier celda de la tabla de apuntes
+    pulsando las teclas del cursor o señalando con el puntero del ratón. Para
+    editar cualquier contenido de celda pulsaremos la tecla
+    <span class="keysym">F2</span>.</p>
+				<p>En lugar de introducir códigos de subcuenta con todos sus dígitos,
+    podemos dar entrada a anotaciones abreviadas utilizando el
+    carácter <span class="quote">“<span class="quote">.</span>”</span> para sustituir sucesiones de ceros (éste es el
+    dígito que más se repite en los códigos). De esta forma conseguimos
+    introducir información de forma más cómoda, sin tener que preocuparnos de la
+    longitud de las subcuentas.
+</p>
+				<p>En las columnas del DEBE y HABER podremos
+	introducir fórmulas que hagan referencia a operaciones básicas tales como sumar (+), restar (-),
+	multiplicar (*), dividir (/), también es posible la utilización de
+	paréntesis.</p>
+				<div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp6"/>Búsqueda de subcuentas en la tabla de edición de asientos</h2></div></div></div>
+						
+						<p>En  muchas ocasiones no recordamos los
+      códigos de las cuentas auxiliares que necesitamos cuando estamos
+      introduciendo apuntes
+      contables. Para nosotros esto no es ningún inconveniente, podemos
+      suministrar parte del código de una cuenta auxiliar (bastaría con indicar, por
+      ejemplo el grupo al que pertenece) y pulsar la tecla
+      <span class="keysym">TAB</span>; aparecerá entonces un cuadro de diálogo en el que
+      podremos buscar cómodamente el código completo que desconocemos:</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/busca_subcuentas.png" width="540" alt="Búsqueda de subcuentas"/></div>
+								</div>
+						</div>
+						<p>Como se aprecia en el gráfico superior, la búsqueda de cuentas auxiliares
+      comienza con la porción de código que suministramos en la tabla de
+      apuntes. La búsqueda es incremental; a medida que completemos la
+      subcuenta, la lista inferior irá restringiendo la búsqueda, filtrando los
+      elementos que cumplan con la condición especificada.</p>
+						<p>Si pulsamos <span class="keysym">INTRO</span> se devolverá el primer código
+      que aparezca en la lista inferior. Podemos devolver cualquier cuenta auxiliar
+      de la lista filtrada si pulsamos el botón izquierdo del ratón sobre el
+      elemento deseado.</p>
+						<p>También podemos realizar búsquedas a partir del título de la
+      cuenta auxiliar (introduciendo caracteres en el campo del título). Si
+      seleccionamos el botón de radio <span class="quote">“<span class="quote">Que contenga...</span>”</span> el
+      filtrado se realizará para todas las subcuentas que posean en su
+      interior la cadena especificada.</p>
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+		</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch21.html">Anterior</a> </td><td align="center"><a accesskey="u" href="pt03.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch22s02.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Capítulo 21. Edición y alta de tipos de diario </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Dar de alta nuevas cuentas auxiliares desde la tabla de edición de asientos</td></tr></table></div></body></html>

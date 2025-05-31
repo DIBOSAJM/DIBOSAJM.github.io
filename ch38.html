@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Capítulo 38. El generador de estados contables</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="pt03.html" title="Parte III. TRABAJANDO CON KEME"/><link rel="prev" href="ch37s02.html" title="Importar datos del diario"/><link rel="next" href="ch38s02.html" title="Pantalla principal del generador de estados contables"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Capítulo 38. El generador de estados contables</th></tr><tr><td align="left"><a accesskey="p" href="ch37s02.html">Anterior</a> </td><th width="60%" align="center">Parte III. TRABAJANDO  CON KEME</th><td align="right"> <a accesskey="n" href="ch38s02.html">Siguiente</a></td></tr></table><hr/></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="idp139"/>Capítulo 38. El generador de estados contables</h2></div></div></div><div class="toc"><p><strong>Tabla de contenidos</strong></p><dl class="toc"><dt><span class="sect1"><a href="ch38.html#idp36">Fórmulas</a></span></dt><dd><dl><dt><span class="sect2"><a href="ch38.html#idp29">Operadores válidos</a></span></dt><dt><span class="sect2"><a href="ch38.html#idp30">Saldos de cuentas</a></span></dt><dt><span class="sect2"><a href="ch38.html#idp31">Presupuestos de cuentas</a></span></dt><dt><span class="sect2"><a href="ch38.html#idp32">Información de contabilidad analítica</a></span></dt><dt><span class="sect2"><a href="ch38.html#idp33">Apartados del documento contable</a></span></dt><dt><span class="sect2"><a href="ch38.html#idp34">Cantidades numéricas</a></span></dt><dt><span class="sect2"><a href="ch38.html#idp35">Restringir a cantidades positivas</a></span></dt></dl></dd><dt><span class="sect1"><a href="ch38s02.html">Pantalla principal del generador de estados contables</a></span></dt><dt><span class="sect1"><a href="ch38s03.html">Editando la primera y segunda parte del estado contable</a></span></dt><dt><span class="sect1"><a href="ch38s04.html">Cálculo y consulta de estados contables</a></span></dt></dl></div>
+				
+				<p>Bajo este nombre
+    designamos un potente generador de documentos contables, tales como
+    balances de situación, cuentas de pérdidas y ganancias, y balances de
+    libre configuración con información ajustada a nuestras necesidades o
+    gustos. La información será extraída del diario, haciendo referencia a las
+    diversas partes del mismo. También es posible incorporar a nuestros
+    documentos magnitudes medias de cuentas y saldos iniciales, lo que nos
+    posibilitaría, por ejemplo, presentar información referente a rotaciones o
+    ratios que utilicen este tipo de datos.</p>
+				<p>Cuando creemos una
+    nueva empresa observaremos que no tendremos en la misma ningún estado
+    contable predefinido; esto es, no podremos realizar balances de situación
+    o presentar la cuenta de Pérdidas y Ganancias. Para solucionar este
+    problema existen unos ficheros de texto que se suministran con la
+    aplicación y que podremos importar a través de la opción del menú
+    <span class="quote">“<span class="quote">Importar estado contable</span>”</span>. De igual forma, si confeccionamos
+    a través del editor de estados contables un documento interesante,
+    podremos exportar a un fichero de texto las definiciones del mismo para su
+    utilización en otras empresas.</p>
+				<div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp36"/>Fórmulas</h2></div></div></div>
+						
+						<p>Los datos numéricos de cada apartado de nuestro documento contable
+      se calculan mediante fórmulas en las que se involucran operadores y
+      referencias a magnitudes tales como saldos de cuenta, apartados,
+      saldos medios, etc. que deberán de cumplir ciertas
+      restricciones.</p>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp29"/>Operadores válidos</h3></div></div></div>
+								
+								<p>Nuestro objetivo es construir una expresión aritmética como una
+	sucesión de operandos y operadores válidos. En nuestro caso, podremos
+	hacer referencia a operaciones básicas tales como sumar (+), restar (-),
+	multiplicar (*), dividir (/), también es posible la utilización de
+	paréntesis, ya sean simples o anidados (paréntesis dentro de paréntesis). En el entorno contable nos
+	basta con estos operadores, por lo que no se contemplan, por ejemplo,
+	funciones trigonométricas, logaritmos, exponenciación, etc., de escasa
+	o nula
+	utilidad en contabilidad.</p>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp30"/>Saldos de cuentas</h3></div></div></div>
+								
+								<p>Para hacer referencia a saldos contables de cuentas basta expresar los
+	códigos de las cuentas
+	entre corchetes. A la hora del cálculo del estado contable, estos
+	corchetes serán sustituidos por la suma de cargos menos los abonos
+	correspondientes a los pases de las partes del diario que hayamos
+	seleccionado en la pantalla principal de la edición del documento
+	(apertura, general, regularización; el diario de cierre no es seleccionable).</p>
+								<p>Si lo que queremos es introducir saldos medios (de todo el ejercicio),
+	independientemente de las partes del diario seleccionadas en la pantalla principal
+	añadiremos al código entre corchetes la mención <span class="quote">“<span class="quote">:MEDIA</span>”</span> en el código de
+	la cuenta; por ejemplo, para hacer mención al saldo medio de las
+	cuentas de caja, emplearemos la expresión
+	<span class="quote">“<span class="quote">[570:MEDIA]</span>”</span>. De igual forma, podremos hacer referencia a saldos
+	iniciales añadiendo la expresión <span class="quote">“<span class="quote">:APERTURA</span>”</span>, que será
+	sustituida por el saldo de apertura de la cuenta en cuestión.</p>
+								<p>Puede ocurrir que la cuenta a introducir pueda figurar tanto en el debe
+	como en el haber del estado contable. Nos interesaría, en este caso,
+	que figurase en el debe sólo la agregación de las cuentas auxiliares
+	que posean saldo deudor, y en el haber sólo
+	las de saldo acreedor. Esto lo podemos conseguir especificando
+	<span class="quote">“<span class="quote">+</span>”</span> o <span class="quote">“<span class="quote">-</span>”</span>, respectivamente, junto con el
+	código de la cuenta; por ejemplo [550+] hace referencia a que sólo
+	figurarán los saldos de las cuentas auxiliares asociadas si éstos son deudores.</p>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp31"/>Presupuestos de cuentas</h3></div></div></div>
+								
+								<p>Podemos hacer que formen parte de nuestros estados contables los
+	presupuestos definidos de nuestras cuentas, para ello añadiremos a la
+	cuenta entre corchetes <span class="quote">“<span class="quote">:PREV</span>”</span>. A la hora del cálculo del
+	importe de la cuenta, el programa buscará en primer lugar saldos de
+	presupuestos de cuentas principales, en caso de no encontrar ninguno, basará el resultado
+	agregando las subcuentas correspondientes.</p>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp32"/>Información de contabilidad analítica</h3></div></div></div>
+								
+								<p>se pueden añadir especificaciones de contabilidad analítica
+            junto con los códigos de cuenta; para ello haremos mención entre
+            corchetes a las cuentas junto con los códigos de imputación, 
+            que separeremos por un punto y coma: <span class="quote">“<span class="quote">[CUENTA;CI]</span>”</span>
+								</p>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp33"/>Apartados del documento contable</h3></div></div></div>
+								
+								<p>También podemos involucrar en el cálculo de las expresiones a otros
+	apartados del estado contable, para ello basta con hacerles mención
+	utilizando el código del nodo del apartado seguido de un número entre
+	paréntesis, que será un uno si hace referencia a un apartado de la
+	primera parte del estado contable, y un dos si hace referencia a un
+	apartado de la segunda parte, respectivamente. Todo esto irá encerrado
+	entre llaves ({}). Ejemplo: <span class="quote">“<span class="quote">{B.1(1)}</span>”</span>.</p>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp34"/>Cantidades numéricas</h3></div></div></div>
+								
+								<p>Podremos incluir en nuestros estados contables números que representen,
+	por ejemplo, coeficientes, cantidades fijas, etc.</p>
+						</div>
+						<div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a id="idp35"/>Restringir a cantidades positivas</h3></div></div></div>
+								
+								<p>En determinados apartados de nuestro estado contable podrá
+	interesarnos que sólo figuren importes cuando estos sean positivos
+	(esto ocurre, por ejemplo, en el saldo de una partida de
+	resultados). Para ello bastará añadir a la fórmula en el final la
+	coletilla <span class="quote">“<span class="quote">;POSITIVO</span>”</span>.</p>
+						</div>
+				</div>
+				
+				
+				
+		</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch37s02.html">Anterior</a> </td><td align="center"><a accesskey="u" href="pt03.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch38s02.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Importar datos del diario </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Pantalla principal del generador de estados contables</td></tr></table></div></body></html>

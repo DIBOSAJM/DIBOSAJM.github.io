@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Capítulo 50. Procesado de la memoria</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="pt03.html" title="Parte III. TRABAJANDO CON KEME"/><link rel="prev" href="ch49.html" title="Capítulo 49. Exportación de información para D2 (Registro Mercantil) y PADIS (Impuesto sociedades)"/><link rel="next" href="ch51.html" title="Capítulo 51. Utilidades"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Capítulo 50. Procesado de la memoria</th></tr><tr><td align="left"><a accesskey="p" href="ch49.html">Anterior</a> </td><th width="60%" align="center">Parte III. TRABAJANDO  CON KEME</th><td align="right"> <a accesskey="n" href="ch51.html">Siguiente</a></td></tr></table><hr/></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="idp165"/>Capítulo 50. Procesado de la memoria</h2></div></div></div>
+				
+				<p>
+						<span class="application">KEME-Contabilidad</span> permite el procesado de cierta información que se añada a la memoria a través de variables definidas por el usuario.</p>
+				<p>Este tratamiento no solo sirve para ayudar a componer la información de la memoria, sino que puede emplearse para cualquier informe o documento contable que vaya a contener información de los datos de la empresa y/o estados contables.</p>
+				<p>El punto de partida se realiza a partir de un documento maestro en texto plano; normalmente escrito en formato <span class="application">Latex</span>, aunque nada impide que se puedan procesar documentos en <span class="application">html</span> o <span class="application">XML</span> (por ejemplo)</p>
+				<p>La definición de una variable comenzará con los símbolos
+    <span class="quote">“<span class="quote">(-</span>”</span> y terminará con <span class="quote">“<span class="quote">-)</span>”</span>; por ejemplo
+    <span class="quote">“<span class="quote">(-EMPRESA-)</span>”</span> hará referencia a la razón social de la
+    empresa.</p>
+				<p>A continuación se exponen los distintos tipos de variables soportados:</p>
+				<div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+								<p>Ejercicio al que se refiere el documento; la declaración será de la forma <span class="quote">“<span class="quote">(-EJERCICIO-)</span>”</span>
+								</p>
+						</li><li class="listitem">
+								<p>
+										<span class="quote">“<span class="quote">(-APERTURA-)</span>”</span>, sería la fecha de apertura del ejercicio al que se refiere el documento contable o memoria.</p>
+						</li><li class="listitem">
+								<p>
+										<span class="quote">“<span class="quote">(-CIERRE-)</span>”</span>, cierre del ejercicio</p>
+						</li><li class="listitem">
+								<p>
+										<span class="quote">“<span class="quote">(-EMPRESA-)</span>”</span>, esta variable será sustituida por el nombre de la empresa para la que se procesa la memoria.</p>
+						</li><li class="listitem">
+								<p>
+										<span class="quote">“<span class="quote">(-FECHACONST-)</span>”</span>, sería la fecha de constitución de la empresa.</p>
+						</li><li class="listitem">
+								<p>
+										<span class="quote">“<span class="quote">(-CIUDAD-)</span>”</span>; ciudad donde radica la sede social de la empresa.</p>
+						</li><li class="listitem">
+								<p>
+										<span class="quote">“<span class="quote">(-PROVINCIA-)</span>”</span>; provincia donde reside la empresa.</p>
+						</li><li class="listitem">
+								<p>
+										<span class="quote">“<span class="quote">(-DOMICILIO-)</span>”</span>; domicilio de la empresa</p>
+						</li><li class="listitem">
+								<p>
+										<span class="quote">“<span class="quote">(-OBJETO-)</span>”</span>; objeto social de la empresa</p>
+						</li><li class="listitem">
+								<p>
+										<span class="quote">“<span class="quote">(-ACTIVIDAD-)</span>”</span>; actividad económica a la que se dedica la empresa.</p>
+						</li><li class="listitem">
+								<p>Podemos asignar el nombre de un estado contable a una
+	  variable, de esta forma podemos hacer referencia al
+	  contenido de cada nodo del estado contable de una forma
+	  más cómoda y abreviada, sin tener que
+	  introducir todo el nombre por completo. Por ejemplo,
+	  <span class="quote">“<span class="quote">(-bal;BALANCE PYMES PLAN 2007-)</span>”</span> nos permite
+	  nombrar al estado contable con tan sólo utilizar el
+	  nombre de la variable <span class="quote">“<span class="quote">bal</span>”</span>
+								</p>
+						</li><li class="listitem">
+								<p>A lo largo del documento, podremos hacer referencia a cualquier nodo de un estado contable haciendo referencia a
+	  la variable que lo sustituye, al código del nodo, y al ejercicio al que se refiere el documento contable; 
+	  por ejemplo: <span class="quote">“<span class="quote">(-bal:TOTAL,1,2008-)</span>”</span>, se sustituirá por el nodo <span class="quote">“<span class="quote">TOTAL</span>”</span> de la primera parte 
+	  del estado contable <span class="quote">“<span class="quote">BALANCE PYMES PLAN 2007</span>”</span>, para el ejercicio 2008.
+	  <span class="quote">“<span class="quote">(-bal:TOTAL,2,2008-) hará referencia al nodo <span class="quote">‘<span class="quote">TOTAL</span>’</span> de la segunda parte (pasivo)</span>”</span>
+								</p>
+						</li></ul></div>
+				<p>El procesado de la memoria se realiza a través de la opción correspondiente del menú <span class="quote">“<span class="quote">Estados Contables</span>”</span>; el resultado se grabará en el directorio de trabajo de la empresa en curso.</p>
+		</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch49.html">Anterior</a> </td><td align="center"><a accesskey="u" href="pt03.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch51.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Capítulo 49. Exportación de información para D2 (Registro Mercantil) y PADIS (Impuesto sociedades) </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Capítulo 51. Utilidades</td></tr></table></div></body></html>

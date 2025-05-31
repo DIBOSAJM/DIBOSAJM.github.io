@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Capítulo 45. Vinculación de copias de documentos a asientos</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="pt03.html" title="Parte III. TRABAJANDO CON KEME"/><link rel="prev" href="ch44s04.html" title="Importar y exportar asientos automáticos"/><link rel="next" href="ch46.html" title="Capítulo 46. Gestión de usuarios"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Capítulo 45. Vinculación de copias de documentos a asientos</th></tr><tr><td align="left"><a accesskey="p" href="ch44s04.html">Anterior</a> </td><th width="60%" align="center">Parte III. TRABAJANDO  CON KEME</th><td align="right"> <a accesskey="n" href="ch46.html">Siguiente</a></td></tr></table><hr/></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="idp160"/>Capítulo 45. Vinculación de copias de documentos a asientos</h2></div></div></div>
+				
+				<p>Una de las novedades principales de la versión 2.6 consiste en la incorporación de un sistema de almacenamiento y consulta de copias de los documentos que originan los asientos contables. Esta característica nos va a permitir en todo momento la verificación de la información contable y contraste con las fuentes documentales de forma inmediata y directa; sin tener que acceder a ningún archivo físico.</p>
+				<p>El primer paso para activar esta característica será configurar KEME accediendo al diálogo de preferencias para asignarle una ruta por defecto donde pueda acceder a los archivos de las copias de los documentos (ruta carga documentos); también definiremos un directorio donde se almacenará organizadamente toda la información (ruta documentos) - este último podrá ser un directorio local o de red (bajo NFS por ejemplo).</p>
+				<p>En Utilidades-preferencias:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/preferencias-docs.png" width="540" alt="Diálogo de preferencias"/></div>
+						</div>
+				</div>
+				<p>El siguiente paso será definir los programas que emplearemos para visualizar documentos. En este caso vemos como utilizamos la aplicación 'okular' para leer ficheros de tipo png y pdf. También podemos vincular otros tipos de archivos, tales como hojas de cálculo, ficheros de procesador de texto, etc.</p>
+				<div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Importante</h3>
+						<p> Si utilizamos Windows puede que nuestro visualizador no esté incluido en el PATH del sistema. Por ello sería conveniente introducir toda la ruta completa en el campo "visualizador"; por ejemplo, para utilizar "Acrobat Reader" para leer ficheros ".pdf", especificaremos la ruta: "C:\Program Files\Adobe\Reader 8.0\Reader\AcroRd32.exe"</p>
+				</div>
+				<p>Ya estamos en condiciones de asociar un documento con algún asiento. Para ello vamos a acceder a la tabla de edición de asientos:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/edita-asiento-doc.png" width="540" alt="Tabla de edición de asientos"/></div>
+						</div>
+				</div>
+				<p>Hemos introducido un asiento sencillo, nos falta vincularle una copia del documento que lo genera. Para ello pulsamos en el botón de abrir fichero para situarnos en el directorio donde hemos colocado copias escaneadas de algunas facturas:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/seleccion-copia-doc.png" width="540" alt="Selección de archivo documento"/></div>
+						</div>
+				</div>
+				<p>Tras seleccionar el archivo correspondiente, pulsaremos aceptar. Ya podremos terminar el asiento; si nos situamos en cualquier pase del asiento recién creado en la pantalla principal de Keme y pulsamos el botón "Visualizar documento":</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/principal-verdocumento.png" width="540" alt="Ver documento"/></div>
+						</div>
+				</div>
+				<p>Acto seguido el visualizador del documento abrirá el archivo vinculado al asiento, que podrá ser de la forma (no es más que un ejemplo):</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/factura-okular.png" width="540" alt="Ver documento"/></div>
+						</div>
+				</div>
+				<p>Hay otras formas de vincular archivos a los asientos; en la siguiente pantalla se muestra cómo la plantilla de IVA soportado/repercutido posee los campos específicos para ello:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/plantillaivasop-doc.png" width="540" alt="Ver documento"/></div>
+						</div>
+				</div>
+				<p>También tenemos acceso a esta característica desde los asientos automáticos:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/automatico-docgraf.png" width="540" alt="Ver documento"/></div>
+						</div>
+				</div>
+				<p>Las asignaciones a documentos pueden ser eliminadas o cambiadas desde la edición de asientos:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/edita-asiento-doc2.png" width="540" alt="Editar asiento"/></div>
+						</div>
+				</div>
+				<p>Como podemos observar en la captura de ventana, a la derecha del campo del documento asignado al asiento tenemos disponibles dos botones; el primero para visualizar el contenido del archivo asociado, y el segundo para eliminarlo.</p>
+				<p>En cualquier momento podremos asignar un nuevo fichero de documento en la tabla de edición de asientos tal y como veíamos al principio del capítulo.</p>
+		</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch44s04.html">Anterior</a> </td><td align="center"><a accesskey="u" href="pt03.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch46.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Importar y exportar asientos automáticos </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Capítulo 46. Gestión de usuarios</td></tr></table></div></body></html>

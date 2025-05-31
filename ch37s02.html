@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Importar datos del diario</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="ch37.html" title="Capítulo 37. Importar datos"/><link rel="prev" href="ch37.html" title="Capítulo 37. Importar datos"/><link rel="next" href="ch38.html" title="Capítulo 38. El generador de estados contables"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Importar datos del diario</th></tr><tr><td align="left"><a accesskey="p" href="ch37.html">Anterior</a> </td><th width="60%" align="center">Capítulo 37. Importar datos</th><td align="right"> <a accesskey="n" href="ch38.html">Siguiente</a></td></tr></table><hr/></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp138"/>Importar datos del diario</h2></div></div></div>
+						
+						<p>El proceso de importar asientos de otras aplicaciones es bastante
+      parecido al que hemos empleado en el punto anterior; partiremos de un
+      fichero en formato texto tabulado que contenga el libro diario
+      contable y lo abriremos con un editor de texto tal como
+      <span class="application">Emacs</span>. Si la información a procesar es muy
+      grande, podemos copiar y pegar trozos del diario en la hoja de cálculo
+      de <span class="application">OpenOffice</span>, donde especificaremos el juego
+      de caracteres correcto del que proceden los pases contables.</p>
+						<p>El siguiente paso será editar la hoja de cálculo, de forma que
+      dispondremos los datos contables por columnas en el siguiente
+      orden:</p>
+						<div class="orderedlist"><ol class="orderedlist"><li class="listitem">
+										<p>Número de asiento</p>
+								</li><li class="listitem">
+										<p>Fecha</p>
+								</li><li class="listitem">
+										<p>Código de cuenta</p>
+								</li><li class="listitem">
+										<p>Concepto de cargo/abono</p>
+								</li><li class="listitem">
+										<p>Importe de la anotación en el Debe</p>
+								</li><li class="listitem">
+										<p>Importe de la anotación en el Haber</p>
+								</li><li class="listitem">
+										<p>Documento (este campo es opcional)</p>
+								</li></ol></div>
+						<p>Una vez terminada la edición, guardaremos el fichero en el
+      directorio de trabajo de la aplicación. El formato elegido será en modo
+      de texto tabulado, sin ningún tipo de separador para cadenas, y con el
+      juego de caracteres <acronym class="acronym">Unicode</acronym> (ver punto
+      anterior).</p>
+						<p>Desde nuestra empresa en el programa de
+      contabilidad accederemos al diálogo de importar asientos del diario
+      mediante la opción del menú <span class="guimenu">Utilidades</span> → <span class="guimenuitem">Importar</span> → <span class="guimenuitem">Importar asientos
+      diario</span>:</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/importar_asientos.png" width="540" alt="Diálogo importar asientos"/></div>
+								</div>
+						</div>
+						<p>Antes de procesar el fichero que elijamos se comprobará entre
+      otras cosas si hay descuadres de asientos, si las fechas suministradas
+      son válidas (debe de estar dado de alta un ejercicio no cerrado que
+      permita aceptar asientos con las fechas suministradas),o si existen
+      todas las cuentas del diario a importar. En el caso de que se detecte
+      algún error el proceso se cancelará, informando al usuario.</p>
+						<p>Si el proceso se concluye con éxito, y para la correcta
+      interpretación de los pases importados, deberemos de suministrar una
+      información extra en lo concerniente a qué asientos corresponden al
+      diario de apertura, regularización y cierre. Para ello, basta
+      seleccionar en la pantalla principal cualquier pase correspondiente al
+      asiento que queramos modificar y seleccionar en el menú
+      <span class="guimenu">Utilidades</span> → <span class="guimenuitem">Importar</span> → <span class="guimenuitem">Asignar
+      diario</span>
+						</p>
+						<p>Puede ocurrir que estemos
+      importando información de ejercicios cerrados; en este caso, deberemos,
+      una vez concluido el proceso, de marcar el ejercicio como cerrado
+      mediante
+      <span class="guimenu">Utilidades</span> → <span class="guimenuitem">Importar</span> → <span class="guimenuitem">Marcar
+      como cerrado ejercicio</span>
+						</p>
+						<p>El
+      proceso no se llevará a cabo igualmente si estamos importando pases con
+      cuentas de iva soportado/repercutido. Esto ocurre para evitar descuadres
+      de la contabilidad con los libros de facturas emitidas y/o
+      recibidas. Para evitar este problema, deberemos de dejar vacíos
+      momentáneamente los campos de cuenta de iva soportado y cuenta de iva
+      repercutido en el cuadro de configuración de empresa. Esto lo
+      conseguimos accediendo al mismo mediante
+      <span class="guimenu">Empresa-</span> → <span class="guimenuitem">Configuración de
+      empresa</span>.</p>
+						<div class="important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Importante</h3>
+								<p>No se deben de mezclar en un mismo ejercicio apuntes con cuentas
+	de iva no vinculados a los libros de IVA repercutido/soportado con
+	otros que sí lo estén. Esto provocaría una falta de concordancia de
+	los registros de IVA con el diario contable.</p>
+						</div>
+				</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch37.html">Anterior</a> </td><td align="center"><a accesskey="u" href="ch37.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch38.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Capítulo 37. Importar datos </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Capítulo 38. El generador de estados contables</td></tr></table></div></body></html>

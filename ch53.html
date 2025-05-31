@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Capítulo 53. Informes de KEME-Contabilidad con OpenOffice Base</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="pt03.html" title="Parte III. TRABAJANDO CON KEME"/><link rel="prev" href="ch52s04.html" title="Importación"/><link rel="next" href="ch54.html" title="Capítulo 54. Empresa de ejemplo"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Capítulo 53. Informes de KEME-Contabilidad con OpenOffice Base</th></tr><tr><td align="left"><a accesskey="p" href="ch52s04.html">Anterior</a> </td><th width="60%" align="center">Parte III. TRABAJANDO  CON KEME</th><td align="right"> <a accesskey="n" href="ch54.html">Siguiente</a></td></tr></table><hr/></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="idp180"/>Capítulo 53. Informes de KEME-Contabilidad con OpenOffice Base</h2></div></div></div>
+				
+				<p>Podemos acceder a MySQL o PostgreSQL a través de OpenOffice
+    utilizando una conexión JBDC o ODBC. Nos vamos a centrar en JBDC y la base
+    de datos PostgreSQL. Para MySQL el proceso es similar.</p>
+				<p>El primer paso será disponer de la máquina virtual de Java en
+    nuestro equipo. Para ello instalaremos el paquete correspondiente de
+    nuestra distribución o bien descargaremos el software de
+    http://www.java.com
+				</p>
+				<p>Posteriormente, nos haremos con el controlador JDBC para Postgres;
+    lo podremos encontrar en la página: http://jdbc.postgresql.org/download.html
+				</p>
+				<p>También es bastante factible que esté disponible para nuestra
+    distribución; por ejemplo, para OpenSuse instalaremos el paquete
+    <span class="quote">“<span class="quote">postgresql-jdbc.rpm</span>”</span>. Es muy importante identificar la ruta
+    donde se va a ubicar el controlador, ya que haremos referencia a ella en el
+    proceso de activación bajo OpenOffice. En OpenSuse lo podremos encontrar
+    en <span class="quote">“<span class="quote">/usr/share/pgsql</span>”</span>
+				</p>
+				<p>El siguiente paso será arrancar OpenOffice 2.X, a través de
+    <span class="quote">“<span class="quote">OpenOffice Writer</span>”</span>, o <span class="quote">“<span class="quote">OpenOffice Calc</span>”</span> (por ejemplo). Ejecutaremos la
+    opción del menú <span class="quote">“<span class="quote">Herramientas--Opciones</span>”</span>. En el cuadro de diálogo que
+    aparecerá, seleccionaremos la línea <span class="quote">“<span class="quote">Java</span>”</span>, tras unos segundos aparecerá
+    la máquina virtual de Java instalada:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/opciones-java-oo.png" width="540" alt="Opciones java en OpenOffice"/></div>
+						</div>
+				</div>
+				<p>En la parte derecha podemos observar el botón <span class="quote">“<span class="quote">Class Path</span>”</span>, lo
+    presionaremos, y aparecerá el cuadro de diálogo:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/ruta-clases-java.png" width="540" alt="Ruta de clases java ooo"/></div>
+						</div>
+				</div>
+				<p>Pulsaremos <span class="quote">“<span class="quote">Agregar archivo</span>”</span> y buscaremos el controlador Java al que
+    hacíamos mención con anterioridad (no es más que un archivo con la
+    extensión .jar). El resultado quedará más o menos de la forma: (depende
+    del nombre del controlador)</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/ruta-clases-java-controlador.png" width="540" alt="Ruta de clases java ooo controlador"/></div>
+						</div>
+				</div>
+				<p>Ya sólo nos queda pulsar los botones <span class="quote">“<span class="quote">Aceptar</span>”</span> para guardar la
+    configuración. Para que los cambios tengan efecto, tendremos que reiniciar
+    OpenOffice.</p>
+				<p>Para conectarnos a nuestra base de datos <span class="quote">“<span class="quote">Postgres</span>”</span> seleccionaremos
+    <span class="guimenu">Archivo-</span> → <span class="guimenuitem">Nuevo-</span> → <span class="guimenuitem">Base de datos</span>, bajo cualquier
+    componente de OpenOffice:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/asistentebd-ooo.png" width="540" alt="Asistente bd ooo"/></div>
+						</div>
+				</div>
+				<p>Elegiremos <span class="quote">“<span class="quote">Conectar con una base de datos existente</span>”</span> y
+    seleccionaremos <span class="quote">“<span class="quote">JDBC</span>”</span> en el combo inferior. Para pasar a la siguiente
+    fase, pulsaremos el botón <span class="quote">“<span class="quote">Siguiente</span>”</span>:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/asistentebd-ooo2.png" width="540" alt="Asistente bd ooo 2"/></div>
+						</div>
+				</div>
+				<p>Como podemos observar, hemos completado el primer campo con la
+    información de nuestra base de datos: <span class="quote">“<span class="quote">localhost</span>”</span> sería el nombre del
+    host donde se ejecuta el motor Postgres (habría que sustituirlo para cada
+    caso en particular). En este caso observamos que nos conectamos al port
+    5432 que es el que utiliza Postgres por defecto. Por último el nombre de
+    nuestra base de datos es <span class="quote">“<span class="quote">ejemplo</span>”</span>
+				</p>
+				<p>En el campo correspondiente a <span class="quote">“<span class="quote">Clase de controlador JDBC</span>”</span>,
+    escribiremos <span class="quote">“<span class="quote">org.postgresql.Driver</span>”</span>. Podremos emplear el
+    botón <span class="quote">“<span class="quote">Clase de prueba</span>”</span> para comprobar que el
+    controlador se carga correctamente.</p>
+				<p>Una vez configurada la conexión JDBC podemos pasar a la siguiente
+    fase:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/asistentebd-ooo3.png" width="540" alt="Asistente bd ooo 3"/></div>
+						</div>
+				</div>
+				<p>Especificaremos nombre de usuario y chequearemos <span class="quote">“<span class="quote">Se requiere una
+   contraseña</span>”</span>  si fuera necesario. El botón
+   <span class="quote">“<span class="quote">Conexión de prueba</span>”</span> nos
+   permitirá verificar que todo es correcto.</p>
+				<p>Si no conseguimos conectarnos a la base de datos, puede que tengamos
+   que cambiar la configuración de Postgres, sobre todo en lo relativo al
+   fichero <span class="quote">“<span class="quote">pg_hba.conf</span>”</span>. En OpenSuse lo podremos encontrar en la ruta:
+   <span class="quote">“<span class="quote">/var/lib/pgsql/data</span>”</span>. La idea será cambiar el esquema de acceso de los
+   usuarios a un sistema menos restrictivo; por ejemplo, cambiaremos el método
+   de acceso (columna <span class="quote">“<span class="quote">METHOD</span>”</span>; último parámetro de los registros de este
+   fichero de texto) por <span class="quote">“<span class="quote">trust</span>”</span>:</p>
+				<pre class="screen">
+						<strong class="userinput"><code>     host all all 127.0.0.1/32 trust</code></strong>
+				</pre>
+				<p>Para editar el fichero <span class="quote">“<span class="quote">pg_hba.conf</span>”</span> utilizaremos un editor de
+    texto. Si hemos realizado algún cambio en el mismo, tendremos que apagar y
+    volver a poner en funcionamiento el servidor Postgres para activar la
+    nueva configuración.</p>
+				<p>Una vez que nos hemos conectado con éxito, ya sólo quedará pulsar el
+    botón <span class="quote">“<span class="quote">Finalizar</span>”</span> para guardar todos los settings de la conexión en un
+    archivo. Acto seguido se abrirá la pantalla principal del apartado
+    <span class="quote">“<span class="quote">Base</span>”</span>
+    de OpenOffice:</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/ooo-base.png" width="540" alt="ooo-base"/></div>
+						</div>
+				</div>
+				<p>Ya estamos en condiciones de realizar nuestras consultas,
+    formularios e informes de nuestra base de datos de
+    KEME-Contabilidad.</p>
+				<p>Nuestra intención será crear un informe que contenga nuestro diario
+    contable. Como va a intervenir más de una tabla, tendremos que construir
+    la consulta que proporcione la información pertinente.</p>
+				<p>Para diseñar la consulta, seleccionaremos el icono <span class="quote">“<span class="quote">Consultas</span>”</span>, y en
+    <span class="quote">“<span class="quote">Tareas</span>”</span> elegiremos <span class="quote">“<span class="quote">Crear una consulta en vista
+    Diseño...</span>”</span> (si no tenemos
+    conocimientos de SQL). Añadiremos las tablas <span class="quote">“<span class="quote">diario</span>”</span> y
+    <span class="quote">“<span class="quote">plancontable</span>”</span>.</p>
+				<p>La ventana de diseño de consultas está formada por dos paneles: en
+    el superior se sitúan las tablas en las que se basa la consulta, en el
+    inferior seleccionaremos los campos que van a intervenir en la
+    misma. Necesitaremos relacionar las dos tablas intervinientes; para ello
+    conectaremos en el panel superior el campo <span class="quote">“<span class="quote">cuenta</span>”</span> de <span class="quote">“<span class="quote">diario</span>”</span> con
+    <span class="quote">“<span class="quote">codigo</span>”</span> de <span class="quote">“<span class="quote">plancontable</span>”</span> pinchando con el botón izquierdo del
+    ratón.</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/dis-consulta.png" width="540" alt="diseño consulta"/></div>
+						</div>
+				</div>
+				<p>En el panel inferior añadiremos los campos asiento, fecha, cuenta,
+    descripción (de la tabla <span class="quote">“<span class="quote">plancontable</span>”</span>), concepto, debe,
+    haber. Posteriormente nos situaremos en la columna <span class="quote">“<span class="quote">asiento</span>”</span> y elegiremos
+    orden <span class="quote">“<span class="quote">ascendente</span>”</span>.</p>
+				<p>Si pulsamos el botón <span class="quote">“<span class="quote">ejecutar consulta</span>”</span>, se abrirá un nuevo
+    apartado con la información que emplearemos para el informe. Si todo es
+    correcto, guardaremos la consulta utilizando la opción del menú
+    <span class="guimenu">Archivo-</span> → <span class="guimenuitem">Guardar</span>
+				</p>
+				<p>Volveremos a la pantalla principal de <span class="quote">“<span class="quote">OpenOffice Base</span>”</span> y crearemos
+    el informe, pulsando sobre el icono correspondiente. El diseño y
+    construcción de un informe con el asistente de <span class="quote">“<span class="quote">OpenOffice Base</span>”</span> consta de
+    varios pasos. En primer lugar seleccionaremos la tabla o consulta de la
+    que se recogerán los datos, posteriormente podremos establecer las
+    etiquetas de los campos, niveles de agrupamiento, aspecto del informe,
+    etc.</p>
+				<p>La siguiente figura muestra lo que podría ser la ejecución de un
+    informe del diario. Se han editado algunos formatos del informe para que
+    recojan mejor los tipos de datos: por ejemplo en las fechas y en el
+    debe/haber.</p>
+				<div class="informalfigure">
+						<div class="screenshot">
+								<div class="mediaobject"><img src="graf/informe-consulta.png" width="540" alt="diseño consulta"/></div>
+						</div>
+				</div>
+		</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch52s04.html">Anterior</a> </td><td align="center"><a accesskey="u" href="pt03.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch54.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Importación </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Capítulo 54. Empresa de ejemplo</td></tr></table></div></body></html>

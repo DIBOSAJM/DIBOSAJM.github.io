@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Apéndice A. Breve introducción a Látex</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="index.html" title="KEME Contabilidad"/><link rel="prev" href="ch55.html" title="Capítulo 55. Tipos de archivos que genera la aplicación"/><link rel="next" href="apb.html" title="Apéndice B. Registro de donaciones y modelo 182"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Apéndice A. Breve introducción a Látex</th></tr><tr><td align="left"><a accesskey="p" href="ch55.html">Anterior</a> </td><th width="60%" align="center"> </th><td align="right"> <a accesskey="n" href="apb.html">Siguiente</a></td></tr></table><hr/></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="idp190"/>Apéndice A. Breve introducción a Látex</h1></div></div></div>
+				
+				<p>
+						<span class="application">KEME-Contabilidad</span> utiliza la herramienta <span class="application">Látex</span> para la mayoría de sus informes y composición de libros contables. Es interesante que el usuario adquiera unas nociones básicas sobre <span class="application">Látex</span> si está interesado en editar y procesar la memoria utilizando esta utilidad.
+</p>
+				<p>
+						<span class="application">Látex</span> es una aplicación que nos permite preparar documentos conseguiendo una alta calidad tipográfica y un diseño profesional. <span class="application">Látex</span> trabaja con ficheros de texto plano, en ASCII, que podremos editar con cualquier editor de texto simple (no un procesador de textos).</p>
+				<p>
+Para la composición y formateado del texto, <span class="application">Látex</span> utiliza órdenes, que para distinguirlas del texto del documento, comienzan por una barra invertida: <span class="quote">“<span class="quote">\</span>”</span>. Cuando Látex procesa un fichero de entrada, espera que el mismo siga una cierta estructura; de esta forma el fichero deberá de empezar con el comando:
+</p>
+				<pre class="screen">
+						<strong class="userinput"><code>\documentclass{....}</code></strong>
+				</pre>
+				<p>que especifica qué tipo de documento intentamos escribir. Después de esto, podemos incluir comandos que cambiarán el estilo del documento por completo, o podremos cargar nuevos paquetes que añadirán nuevas características a <span class="application">Latex</span>. Para añadir un paquete, utilizaremos el comando:</p>
+				<pre class="screen">
+						<strong class="userinput"><code>\usepackage{....}</code></strong>
+				</pre>
+				<p>Cuando se haya realizado toda la configuración, comenzaremos con el cuerpo del documento, con el comando:</p>
+				<pre class="screen">
+						<strong class="userinput"><code>\begin{document}</code></strong>
+				</pre>
+				<p>A partir de ahora introduciremos el texto combinándolo con algunos comandos <span class="application">Latex</span>. Al final del documento, añadiremos el comando:</p>
+				<pre class="screen">
+						<strong class="userinput"><code>\end{document}</code></strong>
+				</pre>
+				<p>que informará a <span class="application">Latex</span> que el texto termina; cualquier contenido que siga a este comando será ignorado. A continuación mostramos el contenido mínimo de un fichero <span class="application">Latex</span>:</p>
+				<pre class="screen">
+						<strong class="userinput"><code>\documentclass{article}</code></strong>
+						<strong class="userinput"><code>\begin{document}</code></strong>
+						<strong class="userinput"><code>Este es el contenido del texto.</code></strong>
+						<strong class="userinput"><code>\end{document}</code></strong>
+				</pre>
+				<p>El ciclo de operaciones necesario para trabajar con <span class="application">Latex</span> y obtener una copia lista para su impresión o presentación está compuesto por tres fases:</p>
+				<div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+								<p>Editar/crear nuestro fichero <span class="application">Latex</span>. Este fichero debe de estar compuesto por texto plano en ASCII, y debe de poseer la extensión <span class="quote">“<span class="quote">.tex</span>”</span>
+								</p>
+						</li><li class="listitem">
+								<p>En segundo lugar, hay que ejecutar el comando <span class="quote">“<span class="quote">Latex</span>”</span>. Si el proceso termina correctamente, obtendremos un fichero con extensión <span class="quote">“<span class="quote">.dvi</span>”</span>. Si hay errores, se parará el proceso y <span class="application">Latex</span> nos notificará donde está el problema. Pulsaremos <span class="keysym">ctrl-D</span> para volver a la línea de comandos.</p>
+								<pre class="screen">
+										<strong class="userinput"><code>latex prueba.tex</code></strong>
+								</pre>
+						</li><li class="listitem">
+								<p>El siguiente paso será visualizar el fichero DVI. Para ello podremos emplear el comando:</p>
+								<pre class="screen">
+										<strong class="userinput"><code>xdvi prueba.dvi</code></strong>
+								</pre>
+								<p>Existen otras herramientas más versátiles que <span class="application">xdvi</span>, tales como <span class="application">kdvi</span> (en entornos Linux con KDE). Bajo Windows, podremos emplear la utilidad <span class="application">yap</span> (<span class="foreignphrase"><em class="foreignphrase">yet another previewer</em></span>).</p>
+								<p>Podemos convertir el fichero dvi a <span class="application">Postcript</span>, de esta forma obtendremos una copia lista para la impresión:</p>
+								<pre class="screen">
+										<strong class="userinput"><code>dvips -Pcmz prueba.dvi -o prueba.ps</code></strong>
+								</pre>
+						</li></ul></div>
+		</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch55.html">Anterior</a> </td><td align="center"> </td><td align="right"> <a accesskey="n" href="apb.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Capítulo 55. Tipos de archivos que genera la aplicación </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Apéndice B. Registro de donaciones y modelo 182</td></tr></table></div></body></html>

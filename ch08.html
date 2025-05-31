@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Capítulo 8. Edición y alta de empresas</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="pt03.html" title="Parte III. TRABAJANDO CON KEME"/><link rel="prev" href="pt03.html" title="Parte III. TRABAJANDO CON KEME"/><link rel="next" href="ch08s02.html" title="Configuración de empresa"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Capítulo 8. Edición y alta de empresas</th></tr><tr><td align="left"><a accesskey="p" href="pt03.html">Anterior</a> </td><th width="60%" align="center">Parte III. TRABAJANDO  CON KEME</th><td align="right"> <a accesskey="n" href="ch08s02.html">Siguiente</a></td></tr></table><hr/></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="idp73"/>Capítulo 8. Edición y alta de empresas</h2></div></div></div><div class="toc"><p><strong>Tabla de contenidos</strong></p><dl class="toc"><dt><span class="sect1"><a href="ch08.html#idp4">Dar de alta nuevas empresas</a></span></dt><dt><span class="sect1"><a href="ch08s02.html">Configuración de empresa</a></span></dt><dt><span class="sect1"><a href="ch08s03.html">Copiar empresa</a></span></dt><dt><span class="sect1"><a href="ch08s04.html">Notas de empresa</a></span></dt></dl></div>
+				
+				<p>La creación de una nueva contabilidad la realizamos dando de alta
+    una empresa. Mediante este proceso añadimos una nueva base de datos
+    que va a contener los datos de la empresa y toda su información contable:
+    libro diario, vencimientos, IVA, amortizaciones, estados contables
+    personalizados para cada empresa, asientos modelo, etc. Cada empresa
+    tendrá su propia configuración en la que definiremos parámetros que
+    condicionarán el funcionamiento de la aplicación en aspectos tales como el
+    IVA, vencimientos, regularización, etc.</p>
+				<div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp4"/>Dar de alta nuevas empresas</h2></div></div></div>
+						
+						<p>Aaccedemos a este proceso seleccionando la opción del menú
+      <span class="guimenu">Empresa</span> → <span class="guimenuitem">Nueva
+      empresa</span>:</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/dialogo_nueva_empresa.png" width="540" alt="Diálogo nueva empresa"/></div>
+								</div>
+						</div>
+						<p>En la ventana podemos distinguir un
+      <span class="foreignphrase"><em class="foreignphrase">combo-box</em></span> en el que seleccionaremos el
+      plan contable con el que estará basada la contabilidad de nuestra
+      empresa. En la mayoría de los casos el <span class="quote">“<span class="quote">Plan General de
+      Contabilidad</span>”</span> será suficiente; no obstante hay regulaciones
+      específicas para empresas de distintos ramos, como construcción,
+      sanitarias, vitivinícolas, etc. Si queremos crear un plan contable
+      específico, podemos elegir <span class="quote">“<span class="quote">Plan contable vacío</span>”</span>. El nuevo
+      plan que introduzcamos lo podremos exportar para la creación de otras
+      empresas o para aportarlo a la comunidad.</p>
+						<p>Otro campo de
+      datos importante a tener en cuenta es el del <span class="quote">“<span class="quote">Número de dígitos de
+      las subcuentas</span>”</span>. Cuantos más dígitos introduzcamos, más niveles
+      de detalle en cuentas podremos introducir aumentando el nivel de
+      complejidad de nuestro Plan Contable. Esto es algo que debe de ser
+      estudiado en profundidad ya que este parámetro no podrá ser cambiado
+      posteriormente.</p>
+						<p>Por último, tenemos que completar los datos
+      referentes a la conexión con la base de datos. Aquí especificaremos en
+      primer lugar el nombre de la base de datos; se recomienda utilizar un
+      nombre no muy largo, sin espacios ni caracteres extraños. Por supuesto,
+      no debe de existir en el mismo <span class="foreignphrase"><em class="foreignphrase">host</em></span> una
+      base de datos con el mismo nombre. Si queremos conocer las bases de
+      datos que está manejando el servidor <span class="application">Postgres</span>
+      en nuestro <acronym class="acronym">PC</acronym> podemos utilizar el programa
+      <span class="application">psql</span> desde la línea de comandos, tecleando:
+      <strong class="userinput"><code>psql -l</code></strong>.</p>
+						<p>Si el servidor de bases de
+      datos se está ejecutando en el mismo <acronym class="acronym">PC</acronym> que la
+      aplicación contable y anteriormente creamos un usuario para el servidor
+      Postgres coincidente con el nombre que tenemos como usuario de nuestro
+      sistema <acronym class="acronym">linux</acronym>, seguramente no tendremos que
+      introducir más información. En caso contrario tendremos que especificar
+      nombre de usuario, clave (en su caso) y nombre del host. Se
+      sobreentiende que nuestro ordenador será capaz de resolver la dirección
+      IP del nombre suministrado; para redes sencillas esto se consigue
+      añadiendo una línea al fichero <code class="filename">/etc/host</code> con el par
+      formado por el nombre de host e IP.</p>
+						<p>En el caso de que
+      utilicemos <span class="application">MySQL</span> tendremos que suministrar,
+      con toda seguridad, el nombre de usuario de forma obligatoria. También
+      podremos conocer las bases de datos disponibles mediante el comando
+      <span class="foreignphrase"><em class="foreignphrase">show databases</em></span> desde el monitor
+      interactivo <span class="application">mysql</span>.</p>
+						<p>Para
+      seleccionar el controlador de bases de datos adecuado, suministraremos
+      el valor correcto al <span class="foreignphrase"><em class="foreignphrase">combo box</em></span> de la
+      parte inferior derecha de la plantilla. Este será <span class="quote">“<span class="quote">QMYSQL</span>”</span>,
+      <span class="quote">“<span class="quote">QPSQL</span>”</span> o <span class="quote">“<span class="quote">QSQLITE</span>”</span> según utilicemos
+      <span class="application">Postgres</span>, <span class="application">MySQL</span>, o
+      <span class="application">SQLITE</span> respectivamente.</p>
+						<p>En el campo <span class="quote">“<span class="quote">PUERTO</span>”</span>  especificaremos un número de puerto, siempre
+      que nos vayamos a conectar al gestor de bases de datos utilizando
+      puertos distintos a los estándar; en caso contrario, dejaremos esta
+      petición de información vacía.</p>
+						<p>La casilla de verificación <span class="quote">“<span class="quote">Longitud variable en cuentas
+      auxiliares</span>”</span> permitirá especificar una codificación del plan contable
+      distinta a la que comúnmente estamos habituados (número fijo de
+      dígitos); esto nos posibilitará importar y trabajar con contabilidades de
+      aplicaciones informáticas que utilicen este sistema.</p>
+				</div>
+				
+				
+				
+		</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="pt03.html">Anterior</a> </td><td align="center"><a accesskey="u" href="pt03.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch08s02.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Parte III. TRABAJANDO  CON KEME </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Configuración de empresa</td></tr></table></div></body></html>

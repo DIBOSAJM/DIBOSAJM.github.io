@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Configuración de empresa</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="ch08.html" title="Capítulo 8. Edición y alta de empresas"/><link rel="prev" href="ch08.html" title="Capítulo 8. Edición y alta de empresas"/><link rel="next" href="ch08s03.html" title="Copiar empresa"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Configuración de empresa</th></tr><tr><td align="left"><a accesskey="p" href="ch08.html">Anterior</a> </td><th width="60%" align="center">Capítulo 8. Edición y alta de empresas</th><td align="right"> <a accesskey="n" href="ch08s03.html">Siguiente</a></td></tr></table><hr/></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp74"/>Configuración de empresa</h2></div></div></div>
+						
+						<p>Mediante este diálogo editamos el contenido de ciertas variables
+      que van a condicionar el funcionamiento de la aplicación para la
+      contabilidad de la empresa seleccionada. En la captura de abajo
+      se muestra la pestaña de <span class="quote">“<span class="quote">Datos de empresa</span>”</span>:</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/configuracion_empresa.png" width="540" alt="Diálogo configuracion empresa"/></div>
+								</div>
+						</div>
+						<p>Las cuatro primeras líneas contienen campos referentes a la razón
+      social e identificación de la empresa. Hemos de destacar el primer campo
+      <span class="quote">“<span class="quote">Empresa</span>”</span>, con el que se encabezarán la mayor parte de los
+      listados impresos. Existen otros campos tales como el objeto
+      social y fecha de constitución que se van a emplear en la
+      edición de la memoria.</p>
+						<p>Bajo la pestaña <span class="quote">“<span class="quote">parámetros</span>”</span> se introducen
+      varias variables que condicionan el funcionamiento de la
+      aplicación:</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/configuracion_empresa2.png" width="540" alt="Diálogo configuracion empresa"/></div>
+								</div>
+						</div>
+						<p>Los campos de cuentas de IVA soportado y repercutido van a
+      contener las cuentas del plan que engloban estas dos
+      partidas. Generalmente su contenido será el de los códigos
+      <span class="quote">“<span class="quote">472</span>”</span> y <span class="quote">“<span class="quote">477</span>”</span>. Se puede dar el caso de que no deseemos
+      que nuestra aplicación lleve, por ejemplo, los registros del libro de
+      facturas emitidas; esto puede ocurrir porque este tipo de registros ya
+      los procese un programa de facturación externo. En este caso dejaremos en blanco
+      el campo correspondiente a cuenta de iva repercutido. Lo mismo cabe
+      decir para el IVA soportado; si no queremos que se procese la
+      información relativa al libro de facturas recibidas, no introduciremos
+      nada en el campo de cuenta de iva soportado.</p>
+						<p>En <span class="quote">“<span class="quote">Clave IVA defecto</span>”</span> introduciremos la clave de IVA
+      que más utilice nuestra empresa, normalmente será la correspondiente al
+      tipo de IVA general.</p>
+						<p>El campo <span class="quote">“<span class="quote">Ancho de cuentas</span>”</span> se suministra a título informativo; no se
+      podrá editar. Su contenido se fijó a la hora de crear la contabilidad de
+      la empresa.</p>
+						<p>Bajo el nombre de <span class="quote">“<span class="quote">Clave gastos</span>”</span> y <span class="quote">“<span class="quote">Clave
+      ingresos</span>”</span> introduciremos los grupos contables
+      correspondientes. Para el Plan General de Contabilidad español serán los
+      correspondientes al grupo 6 y 7, respectivamente. Si utilizamos un plan
+      contable distinto, por ejemplo, uno en el que figuren en
+      inventario gastos pagados y no consumidos, y queramos realizar la
+      regularización contable de forma manual, podremos dejar estos campos sin
+      contenido alguno. También es posible suministrar más de un código por
+      campo; para ello separaremos por comas las distintas entradas. Esto es
+      válido para el plan
+      de contabilidad de algunos países en los que las cuentas de gastos o
+      ingresos se clasifican en más de un grupo.</p>
+						<p>Los campos siguientes son contadores; se incrementan
+      automáticamente por cada apunte o vencimiento que vayamos
+      introduciendo en nuestra contabilidad. </p>
+						<p>En cuanto a <span class="quote">“<span class="quote">Cuentas facturas recibidas</span>”</span> y <span class="quote">“<span class="quote">Cuentas facturas
+      emitidas</span>”</span>, pueden contener una sucesión de códigos de cuentas
+      separadas por comas que serán las que la aplicación tenga en cuenta a la
+      hora de chequear el contenido de determinados campos en la gestión del IVA.</p>
+						<p>El campo correspondiente a <span class="quote">“<span class="quote">Subcuenta
+      Pérdidas y Ganancias para regularización</span>”</span>, como su nombre
+      indica, va a contener la subcuenta que va a registrar el saldo de
+      Pérdidas y Ganancias; para el Plan General de Contabilidad español,
+      tendríamos que indicar un código parecido a <strong class="userinput"><code>129.1</code></strong>ó
+								<strong class="userinput"><code>129.0</code></strong>.</p>
+						<p>El cuadro correspondiente de <span class="quote">“<span class="quote">Contabilidad analítica</span>”</span>
+      sirve para activar esta característica en la empresa que estemos
+      editando. Como podemos observar, podremos llevar una
+      contabilidad analítica parcial, sólo de ciertas cuentas, que
+      especificaremos en el cuadro de edición de texto como una lista
+      separada por comas.</p>
+						<p>La casilla de verificación <span class="quote">“<span class="quote">Desglose en tabla</span>”</span> permite activar 
+      una nueva forma de llevar la contabilidad analítica que nos va a permitir la 
+      realización de imputaciones automáticas por cuentas auxiliares, y una menor
+      profusión de apuntes contables en el diario al llevarse la información de la
+      contabilidad analítica en una tabla aparte.</p>
+						<p>La casilla <span class="quote">“<span class="quote">IGIC (Canarias)</span>”</span> permite que
+      el programa contemple el
+      procesado del Impuesto General Indirecto de las Islas Canarias.</p>
+						<p>
+								<span class="application">KEME Contabilidad</span> permite el registro
+      de IVA soportado para aquellas empresas sometidas a la regla de la
+      prorrata. Para ello se puede especificar el tipo de
+      prorrata en el campo correspondiente del diálogo de configuración de
+      empresa. En la casilla de verificación <span class="quote">“<span class="quote">Prorrata especial</span>”</span>
+      podremos adaptar el comportamiento del programa para que permita la
+      introducción de la prorrata a ramas específicas de la actividad de la empresa. </p>
+						<p>Los campos "amort.(gasto)" y "amort.acumulada" sirven para colocar los códigos de cuentas principales
+      de estas partidas, y de esta forma llevar un control de validez de cuentas auxiliares en el alta de elementos
+      del plan de amortizaciones de inmovilizado.</p>
+						<p>La casilla de verificación "régimen especial criterio caja en iva" sirve para activar el régimen del criterio de 
+      caja, por defecto, para todas las operaciones.</p>
+				</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch08.html">Anterior</a> </td><td align="center"><a accesskey="u" href="ch08.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch08s03.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Capítulo 8. Edición y alta de empresas </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Copiar empresa</td></tr></table></div></body></html>

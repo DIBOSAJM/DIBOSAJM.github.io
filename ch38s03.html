@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Editando la primera y segunda parte del estado contable</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="ch38.html" title="Capítulo 38. El generador de estados contables"/><link rel="prev" href="ch38s02.html" title="Pantalla principal del generador de estados contables"/><link rel="next" href="ch38s04.html" title="Cálculo y consulta de estados contables"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Editando la primera y segunda parte del estado contable</th></tr><tr><td align="left"><a accesskey="p" href="ch38s02.html">Anterior</a> </td><th width="60%" align="center">Capítulo 38. El generador de estados contables</th><td align="right"> <a accesskey="n" href="ch38s04.html">Siguiente</a></td></tr></table><hr/></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp141"/>Editando la primera y segunda parte del estado contable</h2></div></div></div>
+						
+						<p>Bajo las pestañas de la primera y segunda parte se esconden unas
+      plantillas en las que fijaremos el contenido de los diversos apartados
+      que se incluirán en el documento que estamos confeccionando.</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/generador_estados_parte.png" width="540" alt="Pantalla edición de parte del generador de estados contables"/></div>
+								</div>
+						</div>
+						<p>Como se aprecia en la figura, nos encontramos en primer lugar un
+      campo en el que editaremos el título de la parte del estado contable
+      (podrá ser <span class="quote">“<span class="quote">activo</span>”</span> o <span class="quote">“<span class="quote">pasivo</span>”</span> si estamos
+      confeccionando, por ejemplo, un balance de situación y estamos
+      introduciendo la primera o la segunda parte, respectivamente).</p>
+						<p>Justo debajo del título, se sitúa una lista con varias columnas
+      organizada en forma de árbol en la que se dispone el contenido del
+      documento que estamos creando. La información se clasifica en epígrafes y
+      subepígrafes  en cuantos niveles deseemos; para introducir un nuevo elemento
+      a partir de cualquier punto del árbol basta con pulsar el primer botón
+      situado a la derecha. Si por el contrario deseamos introducir un nuevo
+      nodo o rama (subepígrafes), pulsaremos el botón siguiente. El botón con
+      icono en forma de aspa sirve para eliminar cualquier elemento
+      seleccionado de la lista.</p>
+						<p>En cualquier momento podremos chequear la información introducida
+      pulsando el botón correspondiente (el último situado en la columna de la
+      derecha). De esta forma corregiremos posibles incongruencias en el
+      contenido de las claves de los nodos y en el contenido de las
+      fórmulas, principalmente.</p>
+						<div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Sugerencia</h3>
+								<p>Para la rápida localización de errores, es conveniente chequear
+	el contenido de la lista del estado contable frecuentemente. Como
+	mínimo se debería de hacer cada vez que introduzcamos un epígrafe nuevo
+	con su respectiva fórmula; de esta forma comprobaremos
+	fácilmente que la información tecleada hasta el momento es correcta.</p>
+						</div>
+						<p>La edición de los contenidos de cada apartado se realiza en unos
+      campos situados en un recuadro bajo la lista de epígrafes. Aquí
+      editaremos el título de cada elemento, el contenido de
+      la clave del nodo, y por último, la fórmula que deberá cumplir con los
+      requisitos ya mencionados. En este punto, hay una serie de factores a
+      tener en cuenta:</p>
+						<div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+										<p>El contenido del título de cada epígrafe se imprimirá tal y
+	  como se haya introducido, no se le añadirá ninguna numeración ni
+	  información adicional de clasificación.</p>
+								</li><li class="listitem">
+										<p>Todas las claves deberán tener un contenido basado en
+	  caracteres alfanuméricos (letras y números),  en
+	  el que no podrán figurar espacios ni puntos. Esta
+	  información se empleará para construir la identificación de cada
+	  nodo, la cual se compondrá de una sucesión de códigos separados por
+	  puntos, que comenzará por la clave del epígrafe principal,
+	  recorriendo todas las ramas y
+	  terminando en la del subepígrafe correspondiente.</p>
+								</li><li class="listitem">
+										<p>La lista con el contenido de la parte del estado contable se
+	  ordenará automáticamente en orden creciente por código de nodo. Es
+	  importante tener en cuenta que el orden se realiza contemplando los
+	  códigos como cadenas de caracteres. Esto quiere decir, por ejemplo, que el valor literal
+	  <span class="quote">“<span class="quote">10</span>”</span> se  mostrará antes que el valor literal
+	  <span class="quote">“<span class="quote">2</span>”</span>. Para evitar esta incongruencia, podemos emplear
+	  caracteres alfabéticos para designar los nodos, o bien cifras
+	  numéricas con el mismo número de dígitos; así podríamos designar
+	  sucesiones de epígrafes con códigos <span class="quote">“<span class="quote">001</span>”</span>,
+	  <span class="quote">“<span class="quote">002</span>”</span>, <span class="quote">“<span class="quote">003</span>”</span>, etc.</p>
+								</li><li class="listitem">
+										<p>Para introducir líneas horizontales con las que pretendamos
+	  separar diversas partes del estado contable, tan solo tendremos que
+	  añadir un apartado ficticio con una clave que terminará con el
+	  componente <span class="quote">“<span class="quote">-LINEA</span>”</span>. El contenido de la clave será tal
+	  que tras la ordenación de los puntos se sitúe en la posición que deseemos.</p>
+								</li></ul></div>
+				</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch38s02.html">Anterior</a> </td><td align="center"><a accesskey="u" href="ch38.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch38s04.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Pantalla principal del generador de estados contables </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Cálculo y consulta de estados contables</td></tr></table></div></body></html>

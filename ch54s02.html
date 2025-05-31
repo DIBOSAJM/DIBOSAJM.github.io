@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Crear nueva empresa</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="ch54.html" title="Capítulo 54. Empresa de ejemplo"/><link rel="prev" href="ch54.html" title="Capítulo 54. Empresa de ejemplo"/><link rel="next" href="ch54s03.html" title="Configuración de vencimientos"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Crear nueva empresa</th></tr><tr><td align="left"><a accesskey="p" href="ch54.html">Anterior</a> </td><th width="60%" align="center">Capítulo 54. Empresa de ejemplo</th><td align="right"> <a accesskey="n" href="ch54s03.html">Siguiente</a></td></tr></table><hr/></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title"><a id="idp182"/>Crear nueva empresa</h2></div></div></div>
+						
+						<p>El primer paso será el de crear una nueva base de datos, tarea que
+    realizaremos a través de la opción <span class="quote">“<span class="quote">Nueva empresa</span>”</span> del menú
+    <span class="quote">“<span class="quote">Empresa</span>”</span>. En la ventana de diálogo correspondiente
+    especificaremos el plan contable a importar (por ejemplo, pymes),
+    fijaremos el número de dígitos de las subcuentas en 8, y completaremos los
+    campos necesarios para la información de la conexión de la base de datos;
+    si el servidor <span class="application">Postgres</span> se ejecuta en el mismo
+    ordenador desde el que estamos operando, y si el nombre de usuario de
+    nuestra sesión en <acronym class="acronym">Linux</acronym> está registrado bajo
+    <span class="application">Postgres</span>, tan sólo tendremos que suministrar el
+    nombre de base de datos <span class="quote">“<span class="quote">EJEMPLO</span>”</span> (no introducir las
+    comillas). En el caso de utilizar <span class="application">MySQL</span>
+    tendremos que suministrar como mínimo el nombre de usuario, aparte del de
+    la base de datos.</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/dialogo_nueva_empresa.png" width="540" alt="Diálogo nueva empresa"/></div>
+								</div>
+						</div>
+						<p>El siguiente paso será dar de alta las subcuentas a través de
+    <span class="quote">“<span class="quote">Subcuentas</span>”</span> en el menú <span class="quote">“<span class="quote">Plan</span>”</span>. Esto lo
+    podríamos hacer sobre la marcha, a medida que introducimos los asientos,
+    pero resultaría más artificioso.</p>
+						<p>Un punto que no tenemos que olvidar es el de registrar el ejercicio
+    al que irán referidos los apuntes contables, para ello ejecutaremos la
+    opción <span class="guimenu">Empresa</span> → <span class="guimenuitem">Ejercicios
+    contables</span> y daremos de alta el ejercicio 2024, que
+    coincidirá con el año natural (inicio 1/1/2024, fin 31/12/2024).</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/ejercicios.png" width="540" alt="Tabla de ejercicios"/></div>
+								</div>
+						</div>
+						<p>En la configuración de la empresa tendremos que introducir el valor
+    de varios campos que condicionarán el comportamiento de la aplicación en
+    materia de IVA, vencimientos y regularización. Para ello accedemos a
+    <span class="guimenu">Empresa </span> → <span class="guimenuitem">Configuración de
+    empresa</span> y configuraremos los campos <span class="quote">“<span class="quote">cuenta de IVA
+    soportado</span>”</span> como <span class="quote">“<span class="quote">472</span>”</span>, <span class="quote">“<span class="quote">cuenta de IVA
+    repercutido</span>”</span> como <span class="quote">“<span class="quote">477</span>”</span>; en clave de gastos
+    introduciremos el grupo 6: <span class="quote">“<span class="quote">6</span>”</span>, en clave de ingresos, el
+    grupo 7. En cuentas a pagar y en cuentas a cobrar escribiremos sendas
+    listas de partidas para su proceso en el apartado de vencimientos; en
+    nuestro caso nos bastará en <span class="quote">“<span class="quote">cuentas a pagar</span>”</span>, el siguiente contenido,
+    <span class="quote">“<span class="quote">400,401</span>”</span>, y en <span class="quote">“<span class="quote">cuentas a cobrar</span>”</span>, <span class="quote">“<span class="quote">430,431</span>”</span>.</p>
+						<div class="informalfigure">
+								<div class="screenshot">
+										<div class="mediaobject"><img src="graf/configuracion_empresa.png" width="540" alt="Diálogo de configuración de empresa"/></div>
+								</div>
+						</div>
+				</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch54.html">Anterior</a> </td><td align="center"><a accesskey="u" href="ch54.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch54s03.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Capítulo 54. Empresa de ejemplo </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Configuración de vencimientos</td></tr></table></div></body></html>

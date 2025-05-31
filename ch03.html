@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>Capítulo 3. Algunas notas sobre PostgreSQL, MySQL, y SQLITE</title><meta name="generator" content="DocBook XSL Stylesheets Vsnapshot"/><link rel="home" href="index.html" title="KEME Contabilidad"/><link rel="up" href="pt01.html" title="Parte I. INTRODUCCIÓN"/><link rel="prev" href="ch02.html" title="Capítulo 2. Requerimientos"/><link rel="next" href="ch04.html" title="Capítulo 4. Observaciones en torno al punto y a la coma decimal"/></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Capítulo 3. Algunas notas sobre <span class="application">PostgreSQL</span>,
+    <span class="application">MySQL</span>, y <span class="application">SQLITE</span>
+				</th></tr><tr><td align="left"><a accesskey="p" href="ch02.html">Anterior</a> </td><th width="60%" align="center">Parte I. INTRODUCCIÓN</th><td align="right"> <a accesskey="n" href="ch04.html">Siguiente</a></td></tr></table><hr/></div><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="idp59"/>Capítulo 3. Algunas notas sobre <span class="application">PostgreSQL</span>,
+    <span class="application">MySQL</span>, y <span class="application">SQLITE</span>
+				</h2></div></div></div>
+				
+				<p>El programa utiliza un gestor de base de datos para el manejo de la
+    información contable. En la actualidad se soportan
+    <acronym class="acronym">PostgreSQL</acronym>, <acronym class="acronym">MySQL</acronym> y
+    <acronym class="acronym">SQLITE</acronym>.</p>
+				<p>
+						<acronym class="acronym">PostgreSQL</acronym> es un Sistema de Gestión de Bases de
+    Datos basado en
+    <span class="application">POSTGRES Versión 4.2</span>; este sistema fue desarrollado por el
+    Departamento de Informática de Berkeley, en la Universidad de
+    California.<span class="application">PostgreSQL</span> es un sistema robusto,
+    preparado para el manejo de
+    bases de datos muy grandes, soporta el lenguaje de preguntas
+    <acronym class="acronym">SQL92</acronym> y <acronym class="acronym">SQL99</acronym>
+    y permite la integridad de sus datos basada en transacciones; esto permite,
+    en nuestro caso, que no se produzcan descuadres en la contabilidad y evita
+    que se
+    generen inconsistencias en los datos debidos a cortes de luz o a errores
+    del sistema.</p>
+				<p>
+						<acronym class="acronym">MySQL</acronym> es un software
+    <span class="foreignphrase"><em class="foreignphrase">open-source</em></span> que ofrece un servidor de
+    bases de datos muy rápido y estable en entornos críticos, estando capacitado para altas cargas de trabajo. Esta
+    aplicación fue desarrollada por la empresa <acronym class="acronym">MySQL
+    AB</acronym>, compañía que se dedicaba además a su distribución y
+    soporte. En la actualidad es uno de los sistemas de bases de datos de
+    código abierto más
+    utilizados.</p>
+				<p>Los principales objetivos de la empresa<acronym class="acronym">MySQL AB</acronym> que
+    impulsaron el proyecto del
+    servidor <acronym class="acronym">MySQL</acronym> son los siguientes:</p>
+				<div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+								<p>Ser la mejor base de datos y la más utilizada en el mundo.</p>
+						</li><li class="listitem">
+								<p>Que esté disponible y sea asequible para todos.</p>
+						</li><li class="listitem">
+								<p>Que sea fácil de usar</p>
+						</li><li class="listitem">
+								<p>Que esté continuamente en desarrollo, manteniéndose
+	rápida y segura</p>
+						</li><li class="listitem">
+								<p>Que sea agradable en su manejo y mejora</p>
+						</li><li class="listitem">
+								<p>Que no tenga errores</p>
+						</li></ul></div>
+				<p>En cuanto a <acronym class="acronym">SQLITE</acronym>, es una buena alternativa para
+    aquellos supuestos en que el usuario no desee complicarse la vida con
+    instalaciones de gestores de bases de
+    datos. <span class="application">SQLITE</span> nos ofrece, en nuestro caso, un
+    entorno monousuario para manejar nuestra contabilidad de forma inmediata y
+    con todas las prestaciones que nos ofrece KEME-Contabilidad.</p>
+				<p>Como principales características de
+    <span class="application">SQLITE</span> podemos destacar:</p>
+				<div class="itemizedlist"><ul class="itemizedlist"><li class="listitem">
+								<p>No conlleva ningún tipo de configuración; no necesita de ninguna
+	puesta a punto ni administración</p>
+						</li><li class="listitem">
+								<p>Cada base de datos se almacena en un solo fichero independiente
+	y multiplataforma</p>
+						</li><li class="listitem">
+								<p>Soporta bases de datos de más de un terabyte de tamaño y cadenas de
+	caracteres y campos de textos de giga-bytes</p>
+						</li><li class="listitem">
+								<p>Está compuesta por unas librerías muy compactas; de tamaño muy
+	reducido, ocupando menos de 275 Kb</p>
+						</li><li class="listitem">
+								<p>Es más rápida que los motores de bases de datos más populares,
+	para la mayoría de las operaciones comunes.</p>
+						</li><li class="listitem">
+								<p>Es multiplataforma; se puede ejecutar bajo Linux (Unix), MacOSX,
+	OS/2 y Windows. Además se puede portar fácilmente a otros sistemas</p>
+						</li></ul></div>
+		</div><div class="navfooter"><hr/><table width="100%" summary="Navigation footer"><tr><td align="left"><a accesskey="p" href="ch02.html">Anterior</a> </td><td align="center"><a accesskey="u" href="pt01.html">Subir</a></td><td align="right"> <a accesskey="n" href="ch04.html">Siguiente</a></td></tr><tr><td align="left" valign="top">Capítulo 2. Requerimientos </td><td align="center"><a accesskey="h" href="index.html">Inicio</a></td><td align="right" valign="top"> Capítulo 4. Observaciones en torno al punto y a la coma decimal</td></tr></table></div></body></html>
